@@ -10,14 +10,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
-//import javax.xml.crypto.dsig.dom.DOMValidateContext;
 import java.io.IOException;
 import java.net.URL;
-//import java.sql.Connection;
-//import java.sql.SQLException;
-//import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
@@ -31,8 +33,24 @@ public class LoginController implements Initializable {
     private PasswordField pf_password;
 
     @FXML
-    void login(MouseEvent event) {
+    void login(MouseEvent event) throws IOException, SQLException {
 
+        String username = tf_username.getText();
+        String password = pf_password.getText();
+
+        Connection myConn = DbConnect.getInstance().getConnection();
+
+        Statement statement = myConn.createStatement();
+
+        ResultSet resultSet = statement.executeQuery("select * from user where username" +
+                " =  '" + username + "' or email = '" + pf_password + "' and password = '" + password + "'" );
+
+        if (resultSet.next()) {
+
+            Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
+
+            loadView(event, root, main);
+        }
     }
 
     @FXML
@@ -41,20 +59,7 @@ public class LoginController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/App/Views/signup.fxml"));
 
         loadView(event, root, main);
-/*
-        Connection connection = DbConnect.getInstance().getConnection();
-    try {
-        String username = tf_username.getText();
-        String email = tf_email.getText();
-        String password = pf_password.getText();
 
-
-        Statement statement = connection.createStatement();
-
-        int status = ((Statement) statement).executeUpdate("insert into users (username,email,password) values()");
-    }  catch (SQLException e) {
-    e.printStackTrace();
-}*/
     }
 
     static void loadView(MouseEvent event, Parent root, Main main) {
@@ -64,7 +69,10 @@ public class LoginController implements Initializable {
 
         stage.setScene(new Scene(root));
 
+        stage.getScene().setFill(Color.TRANSPARENT);
+
         main.handle(root,stage);
+
     }
 
 
