@@ -55,7 +55,7 @@
                                             </HBox.margin>
                                         </TextField>
 
-                                    </children>
+                                                </children>
                                 </HBox>
                                 <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #fff; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
                                     <children>

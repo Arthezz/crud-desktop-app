@@ -4,6 +4,7 @@ module DMA {
     requires javafx.fxml;
     requires java.sql;
 
+
     exports App;
     opens App.Controllers;
 }
