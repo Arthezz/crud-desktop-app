@@ -61,8 +61,6 @@ public class LoginController implements Initializable {
         ResultSet resultSet = statement.executeQuery("select * from user where binary username" +
                 " =  '" + username + "' and binary password = '" + password + "'" );
 
-        System.out.println(resultSet);
-
         if (resultSet.next()) {
 
             Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
@@ -86,6 +84,7 @@ public class LoginController implements Initializable {
     }
 
     static void loadView(MouseEvent event, Parent root, Main main) {
+
         Node node = (Node) event.getSource();
 
         Stage stage = (Stage) node.getScene().getWindow();

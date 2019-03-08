@@ -1,14 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="App.Controllers.ReadController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="603.0" prefWidth="864.0" style="-fx-background-color: transparent;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.AddController">
+    <children>
+        <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="439.0" prefWidth="343.0" style="-fx-background-color: #104556;" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <children>
+                                <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" onMouseClicked="#btn_add" size="80" textAlignment="CENTER" wrappingWidth="61.14285659790039">
+                                    <VBox.margin>
+                                        <Insets right="10.0" top="40.0" />
+                                    </VBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                </FontAwesomeIconView>
+                                <Text fill="WHITE" onMouseClicked="#btn_add" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Add Employee">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect></Text>
+                                <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" onMouseClicked="#btn_delete" size="80">
+                                    <VBox.margin>
+                                        <Insets left="18.0" top="30.0" />
+                                    </VBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                                </FontAwesomeIconView>
+                                <Text fill="WHITE" onMouseClicked="#btn_delete" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Delete Employee">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect></Text>
+                                <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" onMouseClicked="#btn_browse" size="80">
+                                    <VBox.margin>
+                                        <Insets top="35.0" />
+                                    </VBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                                </FontAwesomeIconView>
+                                <Text fill="WHITE" onMouseClicked="#btn_browse" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Browse Database">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect></Text>
+                                <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" onMouseClicked="#btn_modify" size="80">
+                                    <VBox.margin>
+                                        <Insets top="25.0" />
+                                    </VBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                </FontAwesomeIconView>
+                                <Text fill="WHITE" onMouseClicked="#btn_modify" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Modify Employee">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect></Text>
+                            </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" style="-fx-background-color: #1093bc;" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <children>
+                                <HBox alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="737.0" style="-fx-background-color: transparent;">
+                                    <children>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quciksand; -fx-font-weight: bold; -fx-font-size: 1.5em;" text="Explore whole database">
+                                            <HBox.margin>
+                                                <Insets right="140.0" top="30.0" />
+                                            </HBox.margin>
+                                        </Text>
+                                        <OctIconView fill="WHITE" glyphName="DASH" onMouseClicked="#btn_minimize" size="25">
+                                            <HBox.margin>
+                                                <Insets right="7.0" top="4.0" />
+                                            </HBox.margin>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </OctIconView>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#btn_close" size="25">
+                                            <HBox.margin>
+                                                <Insets right="4.0" top="4.0" />
+                                            </HBox.margin>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </FontAwesomeIconView>
+                                    </children>
+                                </HBox>
+                        <ScrollPane prefHeight="496.0" prefWidth="619.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="620.0">
+                                 <children>
+                                    <TableView prefHeight="490.0" prefWidth="602.0" tableMenuButtonVisible="true">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="First Name" />
+                                        <TableColumn prefWidth="75.0" text="Last Name" />
+                                          <TableColumn prefWidth="75.0" text="Email" />
+                                          <TableColumn prefWidth="75.0" text="City" />
+                                          <TableColumn prefWidth="75.0" text="Street" />
+                                          <TableColumn prefWidth="75.0" text="Salary($)" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
 
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </StackPane>
+    </children>
 </AnchorPane>

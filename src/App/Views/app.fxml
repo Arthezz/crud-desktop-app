@@ -26,30 +26,78 @@
                                 <Insets />
                             </HBox.margin>
                      <children>
-                        <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="80" textAlignment="CENTER" wrappingWidth="61.14285659790039">
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" onMouseClicked="#btn_add" size="80" textAlignment="CENTER" wrappingWidth="61.14285659790039">
                            <VBox.margin>
                               <Insets right="10.0" top="40.0" />
                            </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </FontAwesomeIconView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Add Employee" />
-                        <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" size="80">
+                        <Text fill="WHITE" onMouseClicked="#btn_add" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Add Employee">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect></Text>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" onMouseClicked="#btn_delete" size="80">
                            <VBox.margin>
                               <Insets left="18.0" top="30.0" />
                            </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </FontAwesomeIconView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Delete Employee" />
-                        <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" size="80">
+                        <Text fill="WHITE" onMouseClicked="#btn_delete" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Delete Employee">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect></Text>
+                        <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" onMouseClicked="#btn_browse" size="80">
                            <VBox.margin>
                               <Insets top="35.0" />
                            </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </FontAwesomeIconView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Browse Database" />
-                        <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" size="80">
+                        <Text fill="WHITE" onMouseClicked="#btn_browse" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Browse Database">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect></Text>
+                        <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" onMouseClicked="#btn_modify" size="80">
                            <VBox.margin>
                               <Insets top="25.0" />
                            </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
                         </FontAwesomeIconView>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Modify Employee" />
+                        <Text fill="WHITE" onMouseClicked="#btn_modify" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Modify Employee">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect></Text>
                      </children>
                         </VBox>
                         <VBox alignment="TOP_CENTER" style="-fx-background-color: #1093bc;" HBox.hgrow="ALWAYS">

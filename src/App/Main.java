@@ -14,6 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage)throws Exception{
+
         Parent root = FXMLLoader.load(getClass().getResource("Views/login.fxml"));
 
         stage.setScene(new Scene(root));
@@ -21,13 +22,13 @@ public class Main extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.setResizable(true);
 
-        //drag the frame
+
         handle(root, stage);
 
         stage.show();
     }
 
-
+    //drag the frame
     public void handle(Parent root, Stage stage) {
         root.setOnMousePressed(event -> {
             x = event.getSceneX();
