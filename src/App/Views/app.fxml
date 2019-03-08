@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="551.0" prefWidth="811.0" style="-fx-background-color: transparent;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.AppController">
+<AnchorPane prefHeight="603.0" prefWidth="864.0" style="-fx-background-color: transparent;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.AppController">
     <children>
         <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <effect>
@@ -16,23 +21,86 @@
             <children>
                 <HBox prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <VBox style="-fx-background-color: #104556;" HBox.hgrow="ALWAYS">
+                        <VBox alignment="TOP_CENTER" prefHeight="439.0" prefWidth="343.0" style="-fx-background-color: #104556;" HBox.hgrow="ALWAYS">
                             <HBox.margin>
                                 <Insets />
                             </HBox.margin>
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="80" textAlignment="CENTER" wrappingWidth="61.14285659790039">
+                           <VBox.margin>
+                              <Insets right="10.0" top="40.0" />
+                           </VBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Add Employee" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" size="80">
+                           <VBox.margin>
+                              <Insets left="18.0" top="30.0" />
+                           </VBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Delete Employee" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" size="80">
+                           <VBox.margin>
+                              <Insets top="35.0" />
+                           </VBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Browse Database" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" size="80">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Modify Employee" />
+                     </children>
                         </VBox>
-                        <VBox style="-fx-background-color: #1093bc;" HBox.hgrow="ALWAYS">
+                        <VBox alignment="TOP_CENTER" style="-fx-background-color: #1093bc;" HBox.hgrow="ALWAYS">
                             <HBox.margin>
                                 <Insets />
                             </HBox.margin>
+                     <children>
+                         <HBox alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="737.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <OctIconView fill="WHITE" glyphName="DASH" onMouseClicked="#btn_minimize" size="25">
+                                 <HBox.margin>
+                                    <Insets right="7.0" top="4.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </OctIconView>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#btn_close" size="25">
+                                 <HBox.margin>
+                                    <Insets right="4.0" top="4.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIconView>
+                           </children>
+                         </HBox>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-font-size: 35;" text="Welcome to Database Manager App!">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-font-size: 19;" text="It's a place where you can feel like a Boss ! (or accountant at least)&#10;Hire new employees, fire the old ones, raise their salaries&#10;and explore whole employee database !" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="80" wrappingWidth="71.71428489685059">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-font-size: 19;" text="Get started" />
+                                
+                     </children>
                         </VBox>
                     </children>
                 </HBox>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                    <StackPane.margin>
-                        <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
-                    </StackPane.margin>
-                </VBox>
             </children>
         </StackPane>
     </children>

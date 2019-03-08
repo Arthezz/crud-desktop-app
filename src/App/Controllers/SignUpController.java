@@ -4,10 +4,12 @@ import App.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,6 +29,20 @@ public class SignUpController implements Initializable {
 
     @FXML
     private PasswordField pf_password;
+
+    @FXML
+    void btn_close(MouseEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    void btn_minimize(MouseEvent event){
+
+        Node node = (Node) event.getSource();
+
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.setIconified(true);
+    }
 
     @FXML
     void login(MouseEvent event) throws IOException {
