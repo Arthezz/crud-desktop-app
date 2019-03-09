@@ -24,7 +24,7 @@
                             <children>
                                 <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" onMouseClicked="#btn_add" size="80" textAlignment="CENTER" wrappingWidth="61.14285659790039">
                                     <VBox.margin>
-                                        <Insets right="10.0" top="40.0" />
+                                        <Insets right="10.0" top="30.0" />
                                     </VBox.margin>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -56,7 +56,7 @@
                            </effect></Text>
                                 <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" onMouseClicked="#btn_delete" size="80">
                                     <VBox.margin>
-                                        <Insets left="18.0" top="30.0" />
+                                        <Insets left="18.0" top="25.0" />
                                     </VBox.margin>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -92,7 +92,7 @@
                            </effect></Text>
                                 <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" onMouseClicked="#btn_modify" size="80">
                                     <VBox.margin>
-                                        <Insets top="25.0" />
+                                        <Insets top="15.0" />
                                     </VBox.margin>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -108,6 +108,11 @@
                            <effect>
                               <DropShadow />
                            </effect></Text>
+                        <OctIconView fill="WHITE" glyphName="SIGN_OUT" onMouseClicked="#btn_signOut" size="25">
+                           <VBox.margin>
+                              <Insets top="22.0" />
+                           </VBox.margin>
+                        </OctIconView>
                             </children>
                         </VBox>
                         <VBox alignment="TOP_CENTER" style="-fx-background-color: #1093bc;" HBox.hgrow="ALWAYS">
@@ -142,79 +147,112 @@
                                 </HBox>
                         <HBox prefHeight="493.0" prefWidth="619.0">
                            <children>
-                              <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="488.0" prefWidth="320.0">
+                              <VBox alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="488.0" prefWidth="320.0">
                                  <children>
                                     <TextField fx:id="firstName" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="153.0" promptText="First Name" style="-fx-background-radius: 20;" VBox.vgrow="ALWAYS">
                                        <VBox.margin>
-                                          <Insets left="20.0" right="20.0" top="30.0" />
+                                          <Insets left="20.0" right="20.0" top="10.0" />
                                        </VBox.margin>
                                        <effect>
                                           <InnerShadow />
                                        </effect>
                                     </TextField>
+                                    <Text fx:id="warnFName" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Only letters are allowed!" underline="true" visible="false">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
                                     <TextField fx:id="lastName" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="153.0" promptText="Last Name" style="-fx-background-radius: 20;">
                                        <effect>
                                           <InnerShadow />
                                        </effect>
                                        <VBox.margin>
-                                          <Insets left="20.0" right="20.0" top="40.0" />
+                                          <Insets left="20.0" right="20.0" top="10.0" />
                                        </VBox.margin>
                                     </TextField>
+                                    <Text fx:id="warnLName" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Only letters are allowed!" underline="true" visible="false">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
                                     <TextField fx:id="email" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="153.0" promptText="Email" style="-fx-background-radius: 20;">
                                        <effect>
                                           <InnerShadow />
                                        </effect>
                                        <VBox.margin>
-                                          <Insets bottom="40.0" left="20.0" right="20.0" top="40.0" />
+                                          <Insets left="20.0" right="20.0" top="10.0" />
                                        </VBox.margin>
                                     </TextField>
+                                    <Text fx:id="warnEmail" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Email form: name@domain.tld" underline="true" visible="false">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
                                     <TextField fx:id="city" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="153.0" promptText="City" style="-fx-background-radius: 20;">
                                        <effect>
                                           <InnerShadow />
                                        </effect>
                                        <VBox.margin>
-                                          <Insets bottom="40.0" left="20.0" right="20.0" />
+                                          <Insets left="20.0" right="20.0" top="10.0" />
                                        </VBox.margin>
                                     </TextField>
+                                    <Text fx:id="warnCity" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Only letters are allowed!" underline="true" visible="false">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
                                     <TextField fx:id="street" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="153.0" promptText="Street" style="-fx-background-radius: 20;">
                                        <effect>
                                           <InnerShadow />
                                        </effect>
                                        <VBox.margin>
-                                          <Insets bottom="40.0" left="20.0" right="20.0" />
+                                          <Insets left="20.0" right="20.0" />
                                        </VBox.margin>
                                     </TextField>
-                                    <TextField fx:id="salary" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="153.0" promptText="Salary($)" style="-fx-background-radius: 20;">
+                                    <Text fx:id="warnStreet" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Only letters and numbersare allowed!" underline="true" visible="false">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <TextField fx:id="salary" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="153.0" promptText="Salary ($)" style="-fx-background-radius: 20;">
                                        <effect>
                                           <InnerShadow />
                                        </effect>
                                        <VBox.margin>
-                                          <Insets bottom="20.0" left="20.0" right="20.0" />
+                                          <Insets left="20.0" right="20.0" />
                                        </VBox.margin>
                                     </TextField>
-                                    <Text fill="WHITE" onMouseClicked="#btn_back" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Back to main page">
+                                    <Text fx:id="warnSalary" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Only numbers are allowed!" underline="true" visible="false">
                                        <VBox.margin>
-                                          <Insets left="22.0" top="5.0" />
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_ALT_LEFT" onMouseClicked="#btn_back" size="40">
+                                       <VBox.margin>
+                                          <Insets right="200.0" top="8.0" />
                                        </VBox.margin>
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
-                                    </Text>
+                                    </FontAwesomeIconView>
                                  </children>
                               </VBox>
                               <VBox alignment="CENTER" prefWidth="310.0">
                                  <children>
-                                    <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE_ALT" onMouseClicked="#newEmployee" size="80">
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE_ALT" onMouseClicked="#newEmployee" size="80" text="">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
                                     </FontAwesomeIconView>
                                     <Text fill="WHITE" onMouseClicked="#newEmployee" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Add new employee">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <VBox.margin>
-                                          <Insets bottom="40.0" />
+                                          <Insets bottom="80.0" right="10.0" />
                                        </VBox.margin>
                                     </Text>
                                  </children>

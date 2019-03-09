@@ -28,7 +28,7 @@
                      <children>
                         <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" onMouseClicked="#btn_add" size="80" textAlignment="CENTER" wrappingWidth="61.14285659790039">
                            <VBox.margin>
-                              <Insets right="10.0" top="40.0" />
+                              <Insets right="10.0" top="30.0" />
                            </VBox.margin>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -46,7 +46,7 @@
                            </effect></Text>
                         <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" onMouseClicked="#btn_delete" size="80">
                            <VBox.margin>
-                              <Insets left="18.0" top="30.0" />
+                              <Insets left="18.0" top="25.0" />
                            </VBox.margin>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -82,7 +82,7 @@
                            </effect></Text>
                         <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" onMouseClicked="#btn_modify" size="80">
                            <VBox.margin>
-                              <Insets top="25.0" />
+                              <Insets top="15.0" />
                            </VBox.margin>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -97,7 +97,15 @@
                            </cursor>
                            <effect>
                               <DropShadow />
-                           </effect></Text>
+                           </effect>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Text>
+                        <OctIconView fill="WHITE" glyphName="SIGN_OUT" onMouseClicked="#btn_signOut" size="25">
+                           <VBox.margin>
+                              <Insets top="22.0" />
+                           </VBox.margin>
+                        </OctIconView>
                      </children>
                         </VBox>
                         <VBox alignment="TOP_CENTER" style="-fx-background-color: #1093bc;" HBox.hgrow="ALWAYS">

@@ -12,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -24,12 +25,13 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
 
-    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
     Main main = new Main();
 
     @FXML
     private TextField tf_username;
+
+    @FXML
+    private Text warnUsrPswd;
 
     @FXML
     private PasswordField pf_password;
@@ -51,10 +53,12 @@ public class LoginController implements Initializable {
     @FXML
     void login(MouseEvent event) throws IOException, SQLException {
 
+        String jdbcUrl = "jdbc:mysql://localhost:3306/user_tracker?useSSL=false&serverTimezone=UTC";
+
         String username = tf_username.getText();
         String password = pf_password.getText();
 
-        Connection myConn = DbConnect.getInstance().getConnection();
+        Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
         Statement statement = myConn.createStatement();
 
@@ -67,10 +71,7 @@ public class LoginController implements Initializable {
 
             loadView(event, root, main);
         }else {
-            alert.setTitle("Warning!");
-            alert.setHeaderText("Wrong username or password\n");
-            alert.setContentText("Try again");
-            alert.show();
+            warnUsrPswd.setVisible(true);
         }
     }
 

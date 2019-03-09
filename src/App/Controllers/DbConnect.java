@@ -14,9 +14,8 @@ public class DbConnect {
         return new DbConnect();
     }
 
-    public Connection getConnection() {
+    public Connection getConnection(String jdbcUrl) {
 
-        String jdbcUrl = "jdbc:mysql://localhost:3306/user_tracker?useSSL=false&serverTimezone=UTC";
         String user = "admin";
         String pass = "admin";
 
@@ -31,4 +30,6 @@ public class DbConnect {
         }
         return myConn;
     }
+
+
 }

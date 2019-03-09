@@ -4,16 +4,16 @@ import App.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
@@ -38,10 +38,7 @@ public class SignUpController implements Initializable {
     @FXML
     void btn_minimize(MouseEvent event){
 
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.setIconified(true);
+        loginController.btn_minimize(event);
     }
 
     @FXML
@@ -54,15 +51,14 @@ public class SignUpController implements Initializable {
     }
 
     @FXML
-    void signup(MouseEvent event) {
-
-    try {
+    void signup(MouseEvent event) throws SQLException {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/user_tracker?useSSL=false&serverTimezone=UTC";
 
         String username = tf_username.getText();
-        String email = tf_email.getText();
+        String email= tf_email.getText();
         String password = pf_password.getText();
 
-        Connection myConn = DbConnect.getInstance().getConnection();
+        Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
         Statement statement = myConn.createStatement();
 
@@ -72,11 +68,9 @@ public class SignUpController implements Initializable {
         if(status > 0) {
             System.out.println("user registered");
         }
-
-    }  catch (Exception e) {
-    e.printStackTrace();
-}
     }
+
+    LoginController loginController= new LoginController();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
