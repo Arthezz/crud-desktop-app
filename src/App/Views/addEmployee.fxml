@@ -112,6 +112,9 @@
                            <VBox.margin>
                               <Insets top="22.0" />
                            </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </OctIconView>
                             </children>
                         </VBox>
@@ -239,6 +242,14 @@
                               </VBox>
                               <VBox alignment="CENTER" prefWidth="310.0">
                                  <children>
+                                    <Text fx:id="empExists" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee exisits" visible="false">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" right="10.0" />
+                                       </VBox.margin>
+                                    </Text>
                                     <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE_ALT" onMouseClicked="#newEmployee" size="80" text="">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
@@ -252,7 +263,22 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                        <VBox.margin>
-                                          <Insets bottom="80.0" right="10.0" />
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <FontAwesomeIconView fx:id="addedProperlyThumb" glyphName="THUMBS_UP" size="40" style="-fx-fill: #70e84c;" visible="false">
+                                       <VBox.margin>
+                                          <Insets right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </FontAwesomeIconView>
+                                    <Text fx:id="addedProperly" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #70e84c;" text="Employee added" visible="false">
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text fx:id="warnFillAll" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quciksand; -fx-font-weight: bold;" text="You have to fill all fields!" visible="false">
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
                                        </VBox.margin>
                                     </Text>
                                  </children>
