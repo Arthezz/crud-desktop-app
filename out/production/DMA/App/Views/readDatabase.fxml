@@ -8,7 +8,7 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<AnchorPane prefHeight="603.0" prefWidth="864.0" style="-fx-background-color: transparent;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.AddController">
+<AnchorPane prefHeight="603.0" prefWidth="864.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.AddController">
     <children>
         <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <effect>
@@ -140,27 +140,26 @@
                                         </FontAwesomeIconView>
                                     </children>
                                 </HBox>
-                        <ScrollPane prefHeight="496.0" prefWidth="619.0">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="620.0">
-                                 <children>
-                                    <TableView prefHeight="490.0" prefWidth="602.0" tableMenuButtonVisible="true">
-                                      <columns>
-                                        <TableColumn prefWidth="75.0" text="First Name" />
-                                        <TableColumn prefWidth="75.0" text="Last Name" />
-                                          <TableColumn prefWidth="75.0" text="Email" />
-                                          <TableColumn prefWidth="75.0" text="City" />
-                                          <TableColumn prefWidth="75.0" text="Street" />
-                                          <TableColumn prefWidth="75.0" text="Salary($)" />
-                                      </columns>
-                                       <columnResizePolicy>
-                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                       </columnResizePolicy>
-                                    </TableView>
-                                 </children>
-                              </AnchorPane>
-                          </content>
-                        </ScrollPane>
+                        <VBox prefHeight="504.0" prefWidth="596.0">
+                           <children>
+                              <TableView fx:id="table" onMouseClicked="#getEmployeeData" prefHeight="95.0" prefWidth="387.0" tableMenuButtonVisible="true">
+                                 <columns>
+                                    <TableColumn fx:id="col_FName" prefWidth="86.0" text="First Name" />
+                                    <TableColumn fx:id="col_LName" prefWidth="89.0" text="Last Name" />
+                                    <TableColumn fx:id="col_Email" prefWidth="59.0" text="Email" />
+                                    <TableColumn fx:id="col_City" prefWidth="43.0" text="City" />
+                                    <TableColumn fx:id="col_Street" prefWidth="51.0" text="Street" />
+                                    <TableColumn fx:id="col_Salary" prefWidth="59.0" text="Salary" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TableView>
+                           </children>
+                        </VBox>
 
                             </children>
                         </VBox>

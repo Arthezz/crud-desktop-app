@@ -1,6 +1,7 @@
 package App.Controllers;
 
 import App.Main;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -16,6 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,6 +29,7 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class DeleteController implements Initializable {
+
 
     AppController appController = new AppController();
     LoginController loginController = new LoginController();
@@ -78,12 +81,45 @@ public class DeleteController implements Initializable {
     }
 
     public void deleteEmployee(MouseEvent event) {
+
+        deletedProperlyThumb.setVisible(false);
+        deletedProperly.setVisible(false);
+
+        try {
+        Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
+        Statement statement = myConn.createStatement();
+
+        ResultSet resultSet = statement.executeQuery("select * from employee where binary first_name" +
+                " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
+                "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
+                " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+
+        if (resultSet.isLast() && resultSet.isFirst()) {
+
+            int status = (statement).executeUpdate("DELETE FROM employee where binary first_name" +
+                    " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
+                    "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
+                    " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+
+            if (status > 0) {
+                deletedProperlyThumb.setVisible(true);
+                deletedProperly.setVisible(true);
+                warnTooMany.setVisible(false);
+            }
+
+        }else warnTooMany.setVisible(true);
+
+        } catch (Exception e) { e.printStackTrace(); }
     }
 
     public void searchEmployee(KeyEvent keyEvent) throws SQLException {
 
+        deletedProperlyThumb.setVisible(false);
+        deletedProperly.setVisible(false);
+        warnTooMany.setVisible(false);
+
         oblist.clear();
-        
+
         Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
         Statement statement = myConn.createStatement();
 
@@ -113,10 +149,7 @@ public class DeleteController implements Initializable {
     }
 
     public void getEmployeeData(MouseEvent event) {
-
-    }
-    private void printRow(ModelTable item) {
-        // ...
+        // Maybe someday
     }
 
     //Filling table
@@ -148,6 +181,11 @@ public class DeleteController implements Initializable {
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
     String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
 
+    @FXML
+    private Text warnTooMany, deletedProperly;
+
+    @FXML
+    private FontAwesomeIconView deletedProperlyThumb;
 
     @FXML
     public TextField firstName, lastName, email, city, street, salary;
@@ -160,9 +198,6 @@ public class DeleteController implements Initializable {
 
     @FXML
     private TableColumn<ModelTable, String> col_LName;
-
-    @FXML
-    private TableRow<ModelTable> row_Search;
 
     @FXML
     private TableColumn<ModelTable, String> col_Email;

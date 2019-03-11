@@ -62,9 +62,6 @@ public class ModifyController {
         loginController.loadView(event, root, main);
     }
 
-    public void deleteEmployee(MouseEvent event) {
-    }
-
     public void btn_update(MouseEvent event) {
     }
 }

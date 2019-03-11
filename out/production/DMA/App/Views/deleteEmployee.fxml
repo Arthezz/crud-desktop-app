@@ -177,7 +177,7 @@
                                                                     <InnerShadow />
                                                                 </effect>
                                                                 <VBox.margin>
-                                                                    <Insets bottom="40.0" left="20.0" right="20.0" top="40.0" />
+                                                                    <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
                                                                 </VBox.margin>
                                                             </TextField>
                                              </children>
@@ -231,32 +231,47 @@
                                           <Insets />
                                        </opaqueInsets>
                                     </TableView>
-                                    <FontAwesomeIconView fill="WHITE" glyphName="MINUS_SQUARE_ALT" onMouseClicked="#deleteEmployee" size="80">
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <VBox.margin>
-                                          <Insets top="10.0" />
-                                       </VBox.margin>
-                                    </FontAwesomeIconView>
-                                                <Text fill="WHITE" onMouseClicked="#deleteEmployee" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Delete this employee">
-                                                    <cursor>
-                                                        <Cursor fx:constant="NW_RESIZE" />
-                                                    </cursor>
-                                                    <VBox.margin>
-                                                        <Insets />
-                                                    </VBox.margin>
-                                                </Text>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="171.0" prefWidth="619.0" VBox.vgrow="NEVER">
                                        <children>
-                                          <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_ALT_LEFT" onMouseClicked="#btn_back" size="40">
-                                             <HBox.margin>
-                                                <Insets left="30.0" />
-                                             </HBox.margin>
-                                             <cursor>
-                                                <Cursor fx:constant="HAND" />
-                                             </cursor>
-                                          </FontAwesomeIconView>
+                                          <VBox alignment="BOTTOM_LEFT" prefHeight="171.0" prefWidth="209.0">
+                                             <children>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_ALT_LEFT" onMouseClicked="#btn_back" size="40" wrappingWidth="47.28571319580078">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <VBox.margin>
+                                                      <Insets bottom="14.0" left="40.0" />
+                                                   </VBox.margin>
+                                                </FontAwesomeIconView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="174.0" prefWidth="216.0">
+                                             <children>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="MINUS_SQUARE_ALT" onMouseClicked="#deleteEmployee" size="80">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </FontAwesomeIconView>
+                                                            <Text fill="WHITE" onMouseClicked="#deleteEmployee" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Delete this employee">
+                                                                <cursor>
+                                                                    <Cursor fx:constant="NW_RESIZE" />
+                                                                </cursor>
+                                                                <VBox.margin>
+                                                                    <Insets />
+                                                                </VBox.margin>
+                                                            </Text>
+                                                <Text fx:id="warnTooMany" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="More than one&#10;record is matching !" textAlignment="CENTER" visible="false" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="154.0" prefWidth="201.0">
+                                             <children>
+                                                <FontAwesomeIconView fx:id="deletedProperlyThumb" fill="WHITE" glyphName="THUMBS_UP" size="40" style="-fx-fill: #70e84c;" visible="false" />
+                                                <Text fx:id="deletedProperly" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #70e84c; -fx-font-weight: bold;" text="Employee removed" visible="false" />
+                                             </children>
+                                          </VBox>
                                        </children>
                                     </HBox>
                                             </children>
