@@ -30,11 +30,6 @@ import java.util.ResourceBundle;
 
 public class DeleteController implements Initializable {
 
-
-    AppController appController = new AppController();
-    LoginController loginController = new LoginController();
-    Main main = new Main();
-
     @FXML
     void btn_close(MouseEvent event) {
         System.exit(0);
@@ -73,13 +68,13 @@ public class DeleteController implements Initializable {
 
         loginController.loadView(event, root, main);
     }
-
+    @FXML
     public void btn_back(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
 
         loginController.loadView(event, root, main);
     }
-
+    @FXML
     public void deleteEmployee(MouseEvent event) {
 
         deletedProperlyThumb.setVisible(false);
@@ -111,7 +106,7 @@ public class DeleteController implements Initializable {
 
         } catch (Exception e) { e.printStackTrace(); }
     }
-
+    @FXML
     public void searchEmployee(KeyEvent keyEvent) throws SQLException {
 
         deletedProperlyThumb.setVisible(false);
@@ -120,7 +115,7 @@ public class DeleteController implements Initializable {
 
         oblist.clear();
 
-        Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
+
         Statement statement = myConn.createStatement();
 
         ResultSet resultSet = statement.executeQuery("select * from employee where binary first_name" +
@@ -144,10 +139,15 @@ public class DeleteController implements Initializable {
 
     }
 
+    AppController appController = new AppController();
+    LoginController loginController = new LoginController();
+    Main main = new Main();
+
+    @FXML
     public void btn_signOut(MouseEvent event) throws IOException {
         appController.btn_signOut(event);
     }
-
+    @FXML
     public void getEmployeeData(MouseEvent event) {
         // Maybe someday
     }
@@ -155,7 +155,6 @@ public class DeleteController implements Initializable {
     //Filling table
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
         try {
             Statement statement = myConn.createStatement();
             ResultSet rs = statement.executeQuery("select * from employee ");
@@ -180,6 +179,7 @@ public class DeleteController implements Initializable {
 
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
     String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
+    Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
     @FXML
     private Text warnTooMany, deletedProperly;

@@ -24,7 +24,7 @@
                             <children>
                                 <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" onMouseClicked="#btn_add" size="80" textAlignment="CENTER" wrappingWidth="61.14285659790039">
                                     <VBox.margin>
-                                        <Insets right="10.0" top="40.0" />
+                                        <Insets right="10.0" top="30.0" />
                                     </VBox.margin>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -42,7 +42,7 @@
                            </effect></Text>
                                 <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" onMouseClicked="#btn_delete" size="80">
                                     <VBox.margin>
-                                        <Insets left="18.0" top="30.0" />
+                                        <Insets left="18.0" top="25.0" />
                                     </VBox.margin>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -92,7 +92,7 @@
                            </effect></Text>
                                 <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" onMouseClicked="#btn_modify" size="80">
                                     <VBox.margin>
-                                        <Insets top="25.0" />
+                                        <Insets top="15.0" />
                                     </VBox.margin>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -108,6 +108,14 @@
                            <effect>
                               <DropShadow />
                            </effect></Text>
+                        <OctIconView fill="WHITE" glyphName="SIGN_OUT" onMouseClicked="#btn_signOut" size="25">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets top="22.0" />
+                           </VBox.margin>
+                        </OctIconView>
                             </children>
                         </VBox>
                         <VBox alignment="TOP_CENTER" style="-fx-background-color: #1093bc;" HBox.hgrow="ALWAYS">
@@ -117,9 +125,9 @@
                             <children>
                                 <HBox alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="737.0" style="-fx-background-color: transparent;">
                                     <children>
-                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quciksand; -fx-font-weight: bold; -fx-font-size: 1.5em;" text="Explore whole database">
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quciksand; -fx-font-weight: bold; -fx-font-size: 1.5em;" text="Explore whole database. &#10;You can search employees by: &#10;First name, Last name etc." textAlignment="CENTER">
                                             <HBox.margin>
-                                                <Insets right="140.0" top="30.0" />
+                                                <Insets right="100.0" top="30.0" />
                                             </HBox.margin>
                                         </Text>
                                         <OctIconView fill="WHITE" glyphName="DASH" onMouseClicked="#btn_minimize" size="25">
@@ -140,16 +148,76 @@
                                         </FontAwesomeIconView>
                                     </children>
                                 </HBox>
-                        <VBox prefHeight="504.0" prefWidth="596.0">
+                        <VBox alignment="TOP_CENTER" prefHeight="504.0" prefWidth="596.0">
                            <children>
-                              <TableView fx:id="table" onMouseClicked="#getEmployeeData" prefHeight="95.0" prefWidth="387.0" tableMenuButtonVisible="true">
+                              <HBox prefHeight="100.0" prefWidth="310.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="243.0" prefWidth="310.0">
+                                       <children>
+                                          <TextField fx:id="firstName" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#searchEmployee" prefHeight="31.0" prefWidth="153.0" promptText="First Name" style="-fx-background-radius: 20;" VBox.vgrow="ALWAYS">
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" top="30.0" />
+                                             </VBox.margin>
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                          </TextField>
+                                          <TextField fx:id="lastName" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#searchEmployee" prefHeight="31.0" prefWidth="300.0" promptText="Last Name" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" top="40.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="email" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#searchEmployee" prefHeight="31.0" prefWidth="153.0" promptText="Email" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="310.0">
+                                       <children>
+                                          <TextField fx:id="city" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#searchEmployee" prefHeight="31.0" prefWidth="153.0" promptText="City" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" top="30.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="street" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#searchEmployee" prefHeight="31.0" prefWidth="153.0" promptText="Street" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets bottom="40.0" left="20.0" right="20.0" top="40.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="salary" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#searchEmployee" prefHeight="31.0" prefWidth="153.0" promptText="Salary($)" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="table" onMouseClicked="#getEmployeeData" prefHeight="231.0" prefWidth="616.0" tableMenuButtonVisible="true">
                                  <columns>
                                     <TableColumn fx:id="col_FName" prefWidth="86.0" text="First Name" />
                                     <TableColumn fx:id="col_LName" prefWidth="89.0" text="Last Name" />
-                                    <TableColumn fx:id="col_Email" prefWidth="59.0" text="Email" />
                                     <TableColumn fx:id="col_City" prefWidth="43.0" text="City" />
                                     <TableColumn fx:id="col_Street" prefWidth="51.0" text="Street" />
                                     <TableColumn fx:id="col_Salary" prefWidth="59.0" text="Salary" />
+                                    <TableColumn fx:id="col_Email" prefWidth="59.0" text="Email" />
                                  </columns>
                                  <columnResizePolicy>
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -157,6 +225,9 @@
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
                               </TableView>
                            </children>
                         </VBox>
