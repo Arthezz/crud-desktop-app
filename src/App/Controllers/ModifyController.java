@@ -2,20 +2,13 @@ package App.Controllers;
 
 import App.Main;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class ModifyController {
-    public TextField firstName, lastName, email, city, street, salary;
 
-    LoginController loginController = new LoginController();
-    Main main = new Main();
 
     @FXML
     void btn_close(MouseEvent event) {
@@ -24,44 +17,42 @@ public class ModifyController {
 
     @FXML
     void btn_minimize(MouseEvent event){
-
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.setIconified(true);
+        universalMethods.minimize(event);
     }
 
     @FXML
     void btn_add(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/addEmployee.fxml"));
-
-        loginController.loadView(event, root, main);
+        universalMethods.viewAdd(event);
     }
     @FXML
     void btn_delete(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/deleteEmployee.fxml"));
-
-        loginController.loadView(event, root, main);
+        universalMethods.viewDelete(event);
     }
     @FXML
     void btn_browse(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/readDatabase.fxml"));
-
-        loginController.loadView(event, root, main);
+        universalMethods.viewBrowse(event);
     }
     @FXML
     void btn_modify(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/modifyEmployee.fxml"));
-
-        loginController.loadView(event, root, main);
+        universalMethods.viewModify(event);
     }
-
+    @FXML
     public void btn_back(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
-
-        loginController.loadView(event, root, main);
+        universalMethods.viewApp(event);
+    }
+    @FXML
+    public void btn_signOut(MouseEvent event) throws IOException {
+        universalMethods.signOut(event);
     }
 
     public void btn_update(MouseEvent event) {
     }
+
+    UniversalMethods universalMethods = new UniversalMethods();
+    Main main = new Main();
+
+    @FXML
+    public TextField firstName, lastName, email, city, street, salary;
+
+
 }

@@ -4,17 +4,13 @@ import App.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -33,46 +29,32 @@ public class ReadController implements Initializable {
 
     @FXML
     void btn_minimize(MouseEvent event){
-
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.setIconified(true);
+        universalMethods.minimize(event);
     }
 
     @FXML
     void btn_add(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/addEmployee.fxml"));
-
-        loginController.loadView(event, root, main);
+       universalMethods.viewAdd(event);
     }
     @FXML
     void btn_delete(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/deleteEmployee.fxml"));
-
-        loginController.loadView(event, root, main);
+        universalMethods.viewDelete(event);
     }
     @FXML
     void btn_browse(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/readDatabase.fxml"));
-
-        loginController.loadView(event, root, main);
+        universalMethods.viewBrowse(event);
     }
     @FXML
     void btn_modify(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/modifyEmployee.fxml"));
-
-        loginController.loadView(event, root, main);
+        universalMethods.viewModify(event);
     }
     @FXML
     public void btn_back(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
-
-        loginController.loadView(event, root, main);
+       universalMethods.viewApp(event);
     }
     @FXML
     public void btn_signOut(MouseEvent event) throws IOException {
-        appController.btn_signOut(event);
+        universalMethods.signOut(event);
     }
     @FXML
     public void searchEmployee(KeyEvent keyEvent) throws SQLException {
@@ -102,6 +84,7 @@ public class ReadController implements Initializable {
     }
     @FXML
     public void getEmployeeData(MouseEvent event) {
+        //maybe someday
     }
 
     @Override
@@ -128,9 +111,7 @@ public class ReadController implements Initializable {
         table.setItems(oblist);
     }
 
-    LoginController loginController = new LoginController();
-    AppController appController = new AppController();
-    DeleteController deleteController = new DeleteController();
+    UniversalMethods universalMethods = new UniversalMethods();
     Main main = new Main();
 
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();

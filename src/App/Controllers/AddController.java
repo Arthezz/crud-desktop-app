@@ -3,8 +3,6 @@ package App.Controllers;
 import App.Main;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -23,78 +21,52 @@ public class AddController {
 
     @FXML
     void btn_minimize(MouseEvent event){
-        appController.btn_minimize(event);
+        universalMethods.minimize(event);
     }
 
     @FXML
     void btn_add(MouseEvent event) throws IOException {
-        appController.btn_add(event);
+        universalMethods.viewAdd(event);
     }
     @FXML
     void btn_delete(MouseEvent event) throws IOException {
-        appController.btn_delete(event);
+        universalMethods.viewDelete(event);
     }
     @FXML
     void btn_browse(MouseEvent event) throws IOException {
-        appController.btn_browse(event);
+        universalMethods.viewBrowse(event);
     }
     @FXML
     void btn_modify(MouseEvent event) throws IOException {
-        appController.btn_modify(event);
+        universalMethods.viewModify(event);
+    }
+    @FXML
+    public void btn_back(MouseEvent event) throws IOException {
+        universalMethods.viewApp(event);
+    }
+    @FXML
+    public void btn_signOut(MouseEvent event) throws IOException {
+        universalMethods.signOut(event);
     }
 
     public void newEmployee(MouseEvent event) {
-
-        String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
 
         addedProperlyThumb.setVisible(false);
         addedProperly.setVisible(false);
         warnFillAll.setVisible(false);
         empExists.setVisible(false);
 
-        boolean checkFName = firstName.getText().chars().allMatch(Character::isLetter);
-        boolean checkLName = lastName.getText().chars().allMatch(Character::isLetter);
-        boolean checkCity = city.getText().chars().allMatch(Character::isLetter);
-        boolean checkSalary = salary.getText().chars().allMatch(Character::isDigit);
-        boolean checkEmail = isValidEmailAddress(email.getText());
-        boolean checkStreet = salary.getText().matches("[a-zA-Z0-9]*");
-        boolean empty = false;
+        boolean check;
+        boolean empty;
 
-        if (!checkFName){
-            warnFName.setVisible(true);
-        }else warnFName.setVisible(false);
+        check = universalMethods.checkTextFields(firstName, lastName, email, city, street, salary,
+                warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);
 
-        if (!checkLName){
-            warnLName.setVisible(true);
-        }else warnLName.setVisible(false);
+        empty = universalMethods.checkFulfill(firstName, lastName, email, city, street, salary, warnFillAll);
 
-        if (!checkCity){
-            warnCity.setVisible(true);
-        }else warnCity.setVisible(false);
-
-        if (!checkSalary){
-            warnSalary.setVisible(true);
-        }else warnSalary.setVisible(false);
-
-        if (!checkEmail && !email.getText().isEmpty()){
-            warnEmail.setVisible(true);
-        }else warnEmail.setVisible(false);
-
-        if (!checkStreet){
-            warnStreet.setVisible(true);
-        }else warnStreet.setVisible(false);
-
-        if (firstName.getText().isEmpty() || lastName.getText().isEmpty() ||city.getText().isEmpty() ||
-                street.getText().isEmpty() || email.getText().isEmpty() || salary.getText().isEmpty()){
-            warnFillAll.setVisible(true);
-            empty = true;
-
-        }
-
-        if (checkFName && checkLName && checkCity && checkSalary && checkEmail && checkStreet && !empty){
+        if (check && !empty){
 
         try {
-            Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
             Statement statement = myConn.createStatement();
 
@@ -122,22 +94,13 @@ public class AddController {
 
     }
 
-    public void btn_back(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
+    //Constructors
+    UniversalMethods universalMethods = new UniversalMethods();
 
-        loginController.loadView(event, root, main);
-    }
+    //Connecting to database
+    String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
+    Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
-    public void btn_signOut(MouseEvent event) throws IOException {
-        appController.btn_signOut(event);
-    }
-
-    public boolean isValidEmailAddress(String email) {
-        String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
-        java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
-        java.util.regex.Matcher m = p.matcher(email);
-        return m.matches();
-    }
 
     @FXML
     public TextField firstName, lastName, email, city, street, salary;
@@ -148,7 +111,5 @@ public class AddController {
     @FXML
     public FontAwesomeIconView addedProperlyThumb;
 
-    LoginController loginController = new LoginController();
-    AppController appController = new AppController();
-    Main main = new Main();
+
 }

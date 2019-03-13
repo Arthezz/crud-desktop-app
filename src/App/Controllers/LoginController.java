@@ -4,16 +4,11 @@ import App.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,17 +20,6 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
 
-    Main main = new Main();
-
-    @FXML
-    private TextField tf_username;
-
-    @FXML
-    private Text warnUsrPswd;
-
-    @FXML
-    private PasswordField pf_password;
-
     @FXML
     void btn_close(MouseEvent event) {
         System.exit(0);
@@ -43,11 +27,7 @@ public class LoginController implements Initializable {
 
     @FXML
     void btn_minimize(MouseEvent event){
-
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.setIconified(true);
+        universalMethods.minimize(event);
     }
 
     @FXML
@@ -69,7 +49,7 @@ public class LoginController implements Initializable {
 
             Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
 
-            loadView(event, root, main);
+            universalMethods.loadView(event, root, main);
         }else {
             warnUsrPswd.setVisible(true);
         }
@@ -80,27 +60,23 @@ public class LoginController implements Initializable {
 
         Parent root = FXMLLoader.load(getClass().getResource("/App/Views/signup.fxml"));
 
-        loadView(event, root, main);
+        universalMethods.loadView(event, root, main);
 
     }
-
-    static void loadView(MouseEvent event, Parent root, Main main) {
-
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setScene(new Scene(root));
-
-        stage.getScene().setFill(Color.TRANSPARENT);
-
-        main.handle(root,stage);
-
-    }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
+
+    Main main = new Main();
+    UniversalMethods universalMethods = new UniversalMethods();
+
+    @FXML
+    private TextField tf_username;
+
+    @FXML
+    private Text warnUsrPswd;
+
+    @FXML
+    private PasswordField pf_password;
 }

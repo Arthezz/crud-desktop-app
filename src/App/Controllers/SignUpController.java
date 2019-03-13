@@ -12,23 +12,11 @@ import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class SignUpController implements Initializable {
-
-    Main main = new Main();
-
-    @FXML
-    private TextField tf_username;
-
-    @FXML
-    private TextField tf_email;
-
-    @FXML
-    private PasswordField pf_password;
 
     @FXML
     void btn_close(MouseEvent event) {
@@ -37,8 +25,7 @@ public class SignUpController implements Initializable {
 
     @FXML
     void btn_minimize(MouseEvent event){
-
-        loginController.btn_minimize(event);
+        universalMethods.minimize(event);
     }
 
     @FXML
@@ -46,7 +33,7 @@ public class SignUpController implements Initializable {
 
         Parent root = FXMLLoader.load(getClass().getResource("/App/Views/login.fxml"));
 
-        LoginController.loadView(event, root, main);
+        universalMethods.loadView(event, root, main);
 
     }
 
@@ -70,10 +57,20 @@ public class SignUpController implements Initializable {
         }
     }
 
-    LoginController loginController= new LoginController();
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+    Main main = new Main();
+    UniversalMethods universalMethods = new UniversalMethods();
+
+    @FXML
+    private TextField tf_username;
+
+    @FXML
+    private TextField tf_email;
+
+    @FXML
+    private PasswordField pf_password;
 }

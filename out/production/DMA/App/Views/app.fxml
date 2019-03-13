@@ -105,6 +105,9 @@
                            <VBox.margin>
                               <Insets top="22.0" />
                            </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </OctIconView>
                      </children>
                         </VBox>
