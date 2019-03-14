@@ -1,6 +1,5 @@
 package App.Controllers;
 
-import App.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -60,7 +59,6 @@ public class ReadController implements Initializable {
     public void searchEmployee(KeyEvent keyEvent) throws SQLException {
         oblist.clear();
 
-
         Statement statement = myConn.createStatement();
 
         ResultSet resultSet = statement.executeQuery("select * from employee where binary first_name" +
@@ -111,20 +109,19 @@ public class ReadController implements Initializable {
         table.setItems(oblist);
     }
 
-    UniversalMethods universalMethods = new UniversalMethods();
-    Main main = new Main();
+    private UniversalMethods universalMethods = new UniversalMethods();
 
-    ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
-    String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
-    Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
+    private ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
+    private String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
+    private Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
     @FXML
-    public TextField firstName, lastName, email, city, street, salary;
+    private TextField firstName, lastName, email, city, street, salary;
 
     @FXML
     private TableView<ModelTable> table;
     @FXML
-    public TableColumn<ModelTable, String> col_FName;
+    private TableColumn<ModelTable, String> col_FName;
 
     @FXML
     private TableColumn<ModelTable, String> col_LName;

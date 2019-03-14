@@ -74,7 +74,7 @@ public class DeleteController implements Initializable {
                 " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
             System.out.println(!resultSet.next());
         if (!resultSet.next()) {
-            int status = (statement).executeUpdate("UPDATE FROM employee where binary first_name" +
+            int status = (statement).executeUpdate("DELETE FROM employee where binary first_name" +
                     " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
                     "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                     " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
@@ -152,12 +152,11 @@ public class DeleteController implements Initializable {
         table.setItems(oblist);
     }
 
-    UniversalMethods universalMethods = new UniversalMethods();
-    Main main = new Main();
+    private UniversalMethods universalMethods = new UniversalMethods();
 
-    ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
-    String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
-    Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
+    private ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
+    private String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
+    private Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
     @FXML
     private Text warnTooMany, deletedProperly;
@@ -166,13 +165,13 @@ public class DeleteController implements Initializable {
     private FontAwesomeIconView deletedProperlyThumb;
 
     @FXML
-    public TextField firstName, lastName, email, city, street, salary;
+    private TextField firstName, lastName, email, city, street, salary;
 
     @FXML
     private TableView<ModelTable> table;
 
     @FXML
-    public TableColumn<ModelTable, String> col_FName;
+    private TableColumn<ModelTable, String> col_FName;
 
     @FXML
     private TableColumn<ModelTable, String> col_LName;

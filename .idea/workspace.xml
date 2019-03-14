@@ -2,43 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_15.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_5_7.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DMA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DMA.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/AddController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/AddController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/DbConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/DbConnect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/SignUpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/UniversalMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/UniversalMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/app.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/app.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/signUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/signUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/AppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/DeleteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/DeleteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/ModifyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/ModifyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/ReadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/ReadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/addEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/addEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/modifyEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/modifyEmployee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/AddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Controllers/DbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/DbConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/DeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/DeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/ModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/ModifyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Views/addEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/addEmployee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Views/app.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/app.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controllers/ReadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/ReadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Views/signUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/signUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../path-for-terminal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../path-for-terminal.txt" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -124,22 +102,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Controllers/ReadController.java">
+        <entry file="file://$PROJECT_DIR$/src/App/Controllers/ModelTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-466">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="68">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+                <element signature="e#692#693#0" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java">
+        <entry file="file://$PROJECT_DIR$/src/App/Controllers/ReadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+            <state relative-caret-position="201">
+              <caret line="123" column="47" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,20 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/Controllers/AddController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1085">
-              <caret line="113" column="50" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="113" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Controllers/DeleteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="84" column="46" lean-forward="true" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="46" />
+            <state relative-caret-position="160">
+              <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,8 +143,36 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/Controllers/ModifyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+            <state relative-caret-position="1111">
+              <caret line="167" column="109" selection-start-line="167" selection-start-column="109" selection-end-line="167" selection-end-column="109" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/Controllers/DeleteController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="72" column="45" lean-forward="true" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,7 +184,7 @@
         <entry file="file://$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3638">
+            <state relative-caret-position="-782">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
@@ -215,11 +212,11 @@
       <find>light</find>
       <find>sign</find>
       <find>exi</find>
-      <find>table</find>
       <find>col</find>
       <find>hand</find>
       <find>text</find>
       <find>isl</find>
+      <find>table</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -250,21 +247,21 @@
         <option value="$PROJECT_DIR$/src/App/Views/deleteUser.fxml" />
         <option value="$PROJECT_DIR$/src/App/Main.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/DbConnect.java" />
-        <option value="$PROJECT_DIR$/src/App/Controllers/ModelTable.java" />
         <option value="$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/addEmployee.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/login.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/signUp.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/app.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/readDatabase.fxml" />
-        <option value="$PROJECT_DIR$/src/App/Controllers/ReadController.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/SignUpController.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/App/Controllers/ReadController.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/AppController.java" />
-        <option value="$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java" />
-        <option value="$PROJECT_DIR$/src/App/Controllers/AddController.java" />
+        <option value="$PROJECT_DIR$/src/App/Controllers/ModelTable.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/DeleteController.java" />
+        <option value="$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java" />
         <option value="$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml" />
+        <option value="$PROJECT_DIR$/src/App/Controllers/AddController.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/ModifyController.java" />
       </list>
     </option>
@@ -277,10 +274,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1588" />
-    <option name="y" value="-9" />
-    <option name="width" value="1239" />
-    <option name="height" value="664" />
+    <option name="x" value="102" />
+    <option name="y" value="-23" />
+    <option name="width" value="1549" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -291,6 +288,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -332,7 +330,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,7 +347,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552570202688" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552597751010" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Programowanie/Biblioteki/Dla javy 9 i większej/JavaFX11/javafx-sdk-11.0.2/FontAwesome 8.9/fontawesomefx-commons-9.1.2.jar!/" />
@@ -498,20 +495,21 @@
       <workItem from="1552486173167" duration="605000" />
       <workItem from="1552509557472" duration="593000" />
       <workItem from="1552562266971" duration="6182000" />
+      <workItem from="1552576737808" duration="10214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102977000" />
+    <option name="totallyTimeSpent" value="113191000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Capture Tool" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.1433902" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.18255034" />
       <window_info id="Structure" order="5" weight="0.25" />
       <window_info id="Favorites" order="6" />
       <window_info id="Persistence" order="7" side_tool="true" />
@@ -521,7 +519,7 @@
       <window_info anchor="bottom" id="Database Console" order="3" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.25135428" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -679,41 +677,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css" />
-    <entry file="file://$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Views/readDatabase.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3128">
-          <caret line="184" column="62" lean-forward="true" selection-start-line="184" selection-start-column="62" selection-end-line="184" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/ModelTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -726,32 +695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/AppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Controllers/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/DbConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -769,30 +716,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java">
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="629">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/DbConnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/ModelTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding>
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Controllers/ReadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="201">
+          <caret line="123" column="47" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/AddController.java">
+    <entry file="file://$PROJECT_DIR$/src/App/Views/readDatabase.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1085">
-          <caret line="113" column="50" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="113" selection-end-column="50" />
+        <state relative-caret-position="247">
+          <caret line="216" column="65" selection-start-line="216" selection-start-column="65" selection-end-line="216" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -802,25 +788,39 @@
     <entry file="file://$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3638">
+        <state relative-caret-position="-782">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/DeleteController.java">
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/AddController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="84" column="46" lean-forward="true" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="46" />
+        <state relative-caret-position="160">
+          <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/DeleteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="72" column="45" lean-forward="true" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Controllers/ModifyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+        <state relative-caret-position="1111">
+          <caret line="167" column="109" selection-start-line="167" selection-start-column="109" selection-end-line="167" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,24 +1,27 @@
 package App.Controllers;
 
-import App.Main;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ResourceBundle;
 
-public class ModifyController {
+public class ModifyController implements Initializable {
 
     @FXML
     void btn_close(MouseEvent event) {
@@ -59,6 +62,11 @@ public class ModifyController {
     public void btn_update(MouseEvent event) {
         modifiedProperlyThumb.setVisible(false);
         modifiedProperly.setVisible(false);
+        empExists.setVisible(false);
+
+        boolean check = universalMethods.checkTextFields(firstName, lastName, email, city, street, salary,
+                warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);;
+        boolean empty = universalMethods.checkFulfill(newFirstName, newLastName, newEmail, newCity, newStreet, newSalary, warnFillAll);;
 
         try {
             Statement statement = myConn.createStatement();
@@ -67,21 +75,27 @@ public class ModifyController {
                     " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
                     "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                     " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
-            System.out.println(!resultSet.next());
+
             if (!resultSet.next()) {
-                int status = (statement).executeUpdate("UPDATE FROM employee where binary first_name" +
-                        " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
-                        "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
-                        " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+                System.out.println("Jestem w 1");
+                int status = (statement).executeUpdate("UPDATE employee SET first_name" +
+                        " = '" + newFirstName.getText()  + "', last_name = '" + newLastName.getText() + "'" +
+                        ", email = '" + newEmail.getText()  + "', city = '" + newCity.getText() + "'," +
+                        " street = '" + newStreet.getText() + "', salary = '" + newSalary.getText() + "'" +
+                        " where first_name " +
+                        " LIKE '" + firstName.getText() + '%' + "' AND last_name LIKE '" + lastName.getText() + '%' + "'" +
+                        " AND email LIKE '" + email.getText() + '%' + "'AND city LIKE '" + city.getText() + '%' + "'AND" +
+                        " street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+
 
                 if (status > 0) {
                     modifiedProperlyThumb.setVisible(false);
                     modifiedProperly.setVisible(false);
-                    warnTooMany.setVisible(false);
+                    //warnTooMany.setVisible(false);
                     universalMethods.clearAllFields(firstName, lastName, email, city, street, salary);
                 }
 
-            }else warnTooMany.setVisible(true);
+            }//else empExists.setVisible(true);
 
         } catch (Exception e) { e.printStackTrace(); }
     }
@@ -89,35 +103,78 @@ public class ModifyController {
     @FXML
     public void searchEmployee(KeyEvent keyEvent) {
         try {
-            readController.searchEmployee(keyEvent);
+            oblist.clear();
+
+            Statement statement = myConn.createStatement();
+
+            ResultSet resultSet = statement.executeQuery("select * from employee where binary first_name" +
+                    " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
+                    "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
+                    " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+
+            while (resultSet.next()){
+                oblist.add(new ModelTable(resultSet.getString("first_name"), resultSet.getString("last_name"), resultSet.getString("email"),
+                        resultSet.getString("city"), resultSet.getString("street"), resultSet.getString("salary")));
+
+                col_FName.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+                col_LName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+                col_Email.setCellValueFactory(new PropertyValueFactory<>("email"));
+                col_City.setCellValueFactory(new PropertyValueFactory<>("city"));
+                col_Street.setCellValueFactory(new PropertyValueFactory<>("street"));
+                col_Salary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+
+                table.setItems(oblist);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    ReadController readController= new ReadController();
-    UniversalMethods universalMethods = new UniversalMethods();
-    Main main = new Main();
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            Statement statement = myConn.createStatement();
+            ResultSet rs = statement.executeQuery("select * from employee ");
 
-    ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
-    String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
-    Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
+            while (rs.next()){
+                oblist.add(new ModelTable(rs.getString("first_name"), rs.getString("last_name"), rs.getString("email"),
+                        rs.getString("city"), rs.getString("street"), rs.getString("salary")));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        col_FName.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        col_LName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        col_Email.setCellValueFactory(new PropertyValueFactory<>("email"));
+        col_City.setCellValueFactory(new PropertyValueFactory<>("city"));
+        col_Street.setCellValueFactory(new PropertyValueFactory<>("street"));
+        col_Salary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+
+        table.setItems(oblist);
+    }
+
+    private UniversalMethods universalMethods = new UniversalMethods();
+
+    private ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
+    private String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
+    private Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
     @FXML
-    public TextField firstName, lastName, email, city, street, salary,
+    private TextField firstName, lastName, email, city, street, salary,
             newFirstName, newLastName, newEmail, newCity, newStreet, newSalary;
 
     @FXML
-    public Text warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary, warnTooMany, modifiedProperly, empExists;
+    private Text warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary, warnTooMany, warnFillAll, modifiedProperly, empExists;
 
     @FXML
-    public FontAwesomeIconView modifiedProperlyThumb;
+    private FontAwesomeIconView modifiedProperlyThumb;
 
     @FXML
     private TableView<ModelTable> table;
 
     @FXML
-    public TableColumn<ModelTable, String> col_FName;
+    private TableColumn<ModelTable, String> col_FName;
 
     @FXML
     private TableColumn<ModelTable, String> col_LName;
@@ -134,4 +191,7 @@ public class ModifyController {
     @FXML
     private TableColumn<ModelTable, String> col_Salary;
 
+
+    public void getEmployeeData(MouseEvent event) {
+    }
 }

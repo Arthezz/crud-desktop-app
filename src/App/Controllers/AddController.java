@@ -56,13 +56,13 @@ public class AddController {
         warnFillAll.setVisible(false);
         empExists.setVisible(false);
 
-        boolean check;
-        boolean empty;
+        boolean check = universalMethods.checkTextFields(firstName, lastName, email, city, street, salary,
+                warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);;
+        boolean empty = universalMethods.checkFulfill(firstName, lastName, email, city, street, salary, warnFillAll);;
 
-        check = universalMethods.checkTextFields(firstName, lastName, email, city, street, salary,
-                warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);
 
-        empty = universalMethods.checkFulfill(firstName, lastName, email, city, street, salary, warnFillAll);
+
+
 
         if (check && !empty){
 
@@ -97,21 +97,21 @@ public class AddController {
     }
 
     //Constructors
-    UniversalMethods universalMethods = new UniversalMethods();
+    private UniversalMethods universalMethods = new UniversalMethods();
 
     //Connecting to database
-    String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
-    Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
+    private String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
+    private Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
 
     @FXML
-    public TextField firstName, lastName, email, city, street, salary;
+    private TextField firstName, lastName, email, city, street, salary;
 
     @FXML
-    public Text warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary, warnFillAll, addedProperly, empExists;
+    private Text warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary, warnFillAll, addedProperly, empExists;
 
     @FXML
-    public FontAwesomeIconView addedProperlyThumb;
+    private FontAwesomeIconView addedProperlyThumb;
 
 
 }

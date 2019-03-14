@@ -39,5 +39,5 @@ public class AppController {
         universalMethods.signOut(event);
     }
 
-    UniversalMethods universalMethods = new UniversalMethods();
+    private UniversalMethods universalMethods = new UniversalMethods();
 }
