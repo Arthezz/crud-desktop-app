@@ -80,10 +80,12 @@ public class AddController {
                 int status = (statement).executeUpdate("insert into employee (first_name,last_name,email,city,street,salary)" + " values('" + firstName.getText() + "', '" + lastName.getText() + "'," +
                         " '" + email.getText() + "', '" + city.getText() + "', '" + street.getText() + "', '" + salary.getText() + "')");
 
+
                 if (status > 0) {
                     addedProperlyThumb.setVisible(true);
                     addedProperly.setVisible(true);
                     warnFillAll.setVisible(false);
+                    universalMethods.clearAllFields(firstName, lastName, email, city, street, salary);
                 }
 
             }else empExists.setVisible(true);

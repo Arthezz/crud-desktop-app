@@ -33,6 +33,15 @@ public class UniversalMethods {
 
     }
 
+    void clearAllFields(TextField firstName, TextField lastName, TextField email, TextField city, TextField street, TextField salary){
+        firstName.clear();
+        lastName.clear();
+        email.clear();
+        city.clear();
+        street.clear();
+        salary.clear();
+    }
+
     // Buttons methods
     void minimize(MouseEvent event){
 

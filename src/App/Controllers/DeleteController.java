@@ -66,17 +66,15 @@ public class DeleteController implements Initializable {
         deletedProperly.setVisible(false);
 
         try {
-        Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
         Statement statement = myConn.createStatement();
 
         ResultSet resultSet = statement.executeQuery("select * from employee where binary first_name" +
                 " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
                 "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                 " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
-
-        if (resultSet.isLast() && resultSet.isFirst()) {
-
-            int status = (statement).executeUpdate("DELETE FROM employee where binary first_name" +
+            System.out.println(!resultSet.next());
+        if (!resultSet.next()) {
+            int status = (statement).executeUpdate("UPDATE FROM employee where binary first_name" +
                     " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
                     "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                     " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
@@ -85,6 +83,7 @@ public class DeleteController implements Initializable {
                 deletedProperlyThumb.setVisible(true);
                 deletedProperly.setVisible(true);
                 warnTooMany.setVisible(false);
+                universalMethods.clearAllFields(firstName, lastName, email, city, street, salary);
             }
 
         }else warnTooMany.setVisible(true);
@@ -99,7 +98,6 @@ public class DeleteController implements Initializable {
         warnTooMany.setVisible(false);
 
         oblist.clear();
-
 
         Statement statement = myConn.createStatement();
 
