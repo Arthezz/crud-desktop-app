@@ -106,7 +106,7 @@ public class UniversalMethods {
         boolean checkCity = city.getText().chars().allMatch(Character::isLetter);
         boolean checkSalary = salary.getText().chars().allMatch(Character::isDigit);
         boolean checkEmail = isValidEmailAddress(email.getText());
-        boolean checkStreet = street.getText().matches("[a-zA-Z0-9]*");
+        boolean checkStreet = street.getText().matches("[a-zA-Z0-9- ]*");
 
         if (!checkFName){
             warnFName.setVisible(true);

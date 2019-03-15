@@ -297,15 +297,23 @@
                                           </VBox>
                                        </children>
                                     </HBox>
-                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="58.0" prefWidth="619.0">
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="86.0" prefWidth="563.0">
                                        <children>
                                           <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_ALT_LEFT" onMouseClicked="#btn_back" size="40">
                                              <HBox.margin>
-                                                <Insets bottom="13.0" right="36.0" />
+                                                <Insets bottom="13.0" right="10.0" />
                                              </HBox.margin>
                                           </FontAwesomeIconView>
-                                          <VBox alignment="CENTER" prefHeight="80.0" prefWidth="138.0" />
-                                          <VBox alignment="TOP_CENTER" prefHeight="85.0" prefWidth="122.0">
+                                          <VBox alignment="CENTER" prefHeight="80.0" prefWidth="138.0">
+                                             <children>
+                                                <Text fx:id="warnFillAll" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quciksand; -fx-font-weight: bold;" text="You have to fill all fields!" visible="false">
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                                <Text fx:id="warnTooMany" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="More than one&#10;record is matching !" textAlignment="CENTER" visible="false" />
+                                             </children></VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="76.0" prefWidth="84.0">
                                              <children>
                                                 <FontAwesomeIconView fx:id="modifiedProperlyThumb" glyphName="THUMBS_UP" size="40" style="-fx-fill: #70e84c;" visible="false" />
                                                 <Text fx:id="modifiedProperly" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #70e84c;" text="Employee updated" visible="false" />
@@ -319,7 +327,7 @@
                                                 <Insets right="50.0" />
                                              </HBox.margin>
                                           </VBox>
-                                          <VBox alignment="CENTER" prefHeight="82.0" prefWidth="199.0">
+                                          <VBox alignment="CENTER" prefHeight="86.0" prefWidth="178.0">
                                              <children>
                                                 <FontAwesomeIconView fill="WHITE" glyphName="UPLOAD" onMouseClicked="#btn_update" size="40">
                                                    <VBox.margin>

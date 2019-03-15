@@ -63,41 +63,45 @@ public class ModifyController implements Initializable {
         modifiedProperlyThumb.setVisible(false);
         modifiedProperly.setVisible(false);
         empExists.setVisible(false);
+        warnTooMany.setVisible(false);
 
-        boolean check = universalMethods.checkTextFields(firstName, lastName, email, city, street, salary,
+        boolean check = universalMethods.checkTextFields(newFirstName, newLastName, newEmail, newCity, newStreet, newSalary,
                 warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);;
-        boolean empty = universalMethods.checkFulfill(newFirstName, newLastName, newEmail, newCity, newStreet, newSalary, warnFillAll);;
+        boolean empty = universalMethods.checkFulfill(newFirstName, newLastName, newEmail, newCity, newStreet, newSalary, warnFillAll);
 
-        try {
-            Statement statement = myConn.createStatement();
+        if (check && !empty) {
+            try {
+                Statement statement = myConn.createStatement();
 
-            ResultSet resultSet = statement.executeQuery("select * from employee where binary first_name" +
-                    " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
-                    "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
-                    " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+                ResultSet resultSet = statement.executeQuery("select * from employee where binary first_name" +
+                        " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
+                        "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
+                        " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
 
-            if (!resultSet.next()) {
-                System.out.println("Jestem w 1");
-                int status = (statement).executeUpdate("UPDATE employee SET first_name" +
-                        " = '" + newFirstName.getText()  + "', last_name = '" + newLastName.getText() + "'" +
-                        ", email = '" + newEmail.getText()  + "', city = '" + newCity.getText() + "'," +
-                        " street = '" + newStreet.getText() + "', salary = '" + newSalary.getText() + "'" +
-                        " where first_name " +
-                        " LIKE '" + firstName.getText() + '%' + "' AND last_name LIKE '" + lastName.getText() + '%' + "'" +
-                        " AND email LIKE '" + email.getText() + '%' + "'AND city LIKE '" + city.getText() + '%' + "'AND" +
-                        " street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+                if (!resultSet.next()) {
+                    int status = (statement).executeUpdate("UPDATE employee SET first_name" +
+                            " = '" + newFirstName.getText() + "', last_name = '" + newLastName.getText() + "'" +
+                            ", email = '" + newEmail.getText() + "', city = '" + newCity.getText() + "'," +
+                            " street = '" + newStreet.getText() + "', salary = '" + newSalary.getText() + "'" +
+                            " where first_name " +
+                            " LIKE '" + firstName.getText() + '%' + "' AND last_name LIKE '" + lastName.getText() + '%' + "'" +
+                            " AND email LIKE '" + email.getText() + '%' + "'AND city LIKE '" + city.getText() + '%' + "'AND" +
+                            " street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
 
 
-                if (status > 0) {
-                    modifiedProperlyThumb.setVisible(false);
-                    modifiedProperly.setVisible(false);
-                    //warnTooMany.setVisible(false);
-                    universalMethods.clearAllFields(firstName, lastName, email, city, street, salary);
-                }
+                    if (status > 0) {
+                        modifiedProperlyThumb.setVisible(false);
+                        modifiedProperly.setVisible(false);
+                        warnTooMany.setVisible(false);
+                        universalMethods.clearAllFields(firstName, lastName, email, city, street, salary);
+                    }
 
-            }//else empExists.setVisible(true);
+                }else warnTooMany.setVisible(true);
 
-        } catch (Exception e) { e.printStackTrace(); }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @FXML

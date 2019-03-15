@@ -84,6 +84,7 @@ public class DeleteController implements Initializable {
                 deletedProperly.setVisible(true);
                 warnTooMany.setVisible(false);
                 universalMethods.clearAllFields(firstName, lastName, email, city, street, salary);
+                oblist.clear();
             }
 
         }else warnTooMany.setVisible(true);
