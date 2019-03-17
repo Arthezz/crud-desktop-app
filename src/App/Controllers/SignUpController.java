@@ -22,12 +22,6 @@ import java.util.ResourceBundle;
 public class SignUpController implements Initializable {
 
     @FXML
-    private FontAwesomeIconView addedProperly;
-
-    @FXML
-    private Text fillAll, emailExists, userExists;
-
-    @FXML
     void btn_close(MouseEvent event) { System.exit(0); }
 
     @FXML
@@ -49,6 +43,7 @@ public class SignUpController implements Initializable {
         fillAll.setVisible(false);
         userExists.setVisible(false);
         emailExists.setVisible(false);
+        warnEmail.setVisible(false);
 
         boolean checkEmail = universalMethods.isValidEmailAddress(tf_email.getText());
 
@@ -61,23 +56,30 @@ public class SignUpController implements Initializable {
         ResultSet resultName = statement.executeQuery("select * from user where binary username" +
                 " =  '" + tf_username.getText() + "'" );
         if (!resultName.next()) {
-            
+
             ResultSet resultEmail = statement.executeQuery("select * from user where binary email" + " =  " +
                     "'" + tf_email.getText() + "'");
 
             if (!resultEmail.next()) {
 
-                int status = (statement).executeUpdate("insert into user (username,email,password)" + "" +
-                        "values('" + tf_username.getText() + "', '" + tf_email.getText() + "', '" + pf_password.getText() + "')");
+                if (checkEmail) {
+                    int status = (statement).executeUpdate("insert into user (username,email,password)" + "" +
+                            "values('" + tf_username.getText() + "', '" + tf_email.getText() + "', '" + pf_password.getText() + "')");
 
-                if (status > 0) {
-                    addedProperly.setVisible(true);
-                    fillAll.setVisible(false);
-                    universalMethods.clearAllFields(tf_username, tf_email, pf_password, null,null,null); //Not sure if it's a good practice
-                    System.out.println("user registered");
-                }
+                    if (status > 0) {
+
+                        addedProperly.setVisible(true);
+                        fillAll.setVisible(false);
+                        warnEmail.setVisible(false);
+
+                        tf_username.clear();
+                        tf_email.clear();
+                        pf_password.clear();
+
+                        System.out.println("user registered");
+                    }
+                }else warnEmail.setVisible(true);
             } else emailExists.setVisible(true);
-
         }else userExists.setVisible(true);
     }
 
@@ -90,11 +92,14 @@ public class SignUpController implements Initializable {
     UniversalMethods universalMethods = new UniversalMethods();
 
     @FXML
-    private TextField tf_username;
-
-    @FXML
-    private TextField tf_email;
-
+    private TextField tf_username, tf_email;
     @FXML
     private PasswordField pf_password;
+
+    @FXML
+    private FontAwesomeIconView addedProperly;
+
+    @FXML
+    private Text fillAll, emailExists, userExists, warnEmail;
+
 }

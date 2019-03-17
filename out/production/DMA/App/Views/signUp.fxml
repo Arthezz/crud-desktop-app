@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="603.0" prefWidth="864.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.SignUpController">
@@ -63,7 +64,7 @@
                         <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
                     </StackPane.margin>
                     <children>
-                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: white;">
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: white;">
                             <effect>
                                 <DropShadow />
                             </effect>
@@ -71,48 +72,86 @@
                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 2em; -fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #104556;" text="SignUp" />
                                 <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #fff; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
                                     <VBox.margin>
-                                        <Insets top="30.0" />
+                                        <Insets top="15.0" />
                                     </VBox.margin>
                                     <children>
                                         <TextField fx:id="tf_username" promptText="username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                <Insets left="5.0" right="5.0" top="15.0" />
                                             </HBox.margin>
                                         </TextField>
                               <FontAwesomeIconView glyphName="USER" />
 
                                                 </children>
                                 </HBox>
+                        <Text fx:id="userExists" fill="#f80000" strokeType="OUTSIDE" strokeWidth="0.0" text="User exists" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="15.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
                                 <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #fff; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
                                     <children>
                                         <TextField fx:id="tf_email" promptText="email" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                             <HBox.margin>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                <Insets left="5.0" right="5.0" />
                                             </HBox.margin>
                                         </TextField>
                               <FontAwesomeIconView glyphName="ENVELOPE" />
                                     </children>
                                     <VBox.margin>
-                                        <Insets top="20.0" />
+                                        <Insets top="5.0" />
                                     </VBox.margin>
                                 </HBox>
+                        <Text fx:id="emailExists" fill="#f80000" strokeType="OUTSIDE" strokeWidth="0.0" text="Email already registered" visible="false">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="warnEmail" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Email form: name@domain.tld" visible="false">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
                                 <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #fff; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
                                     <children>
-                                        <PasswordField fx:id="pf_password" promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+                                        <PasswordField fx:id="pf_password" promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></PasswordField>
                               <FontAwesomeIconView glyphName="KEY" />
                                     </children>
                                     <VBox.margin>
-                                        <Insets top="30.0" />
+                                        <Insets top="5.0" />
                                     </VBox.margin>
                                 </HBox>
-                                <Button mnemonicParsing="false" onMouseClicked="#signup" prefWidth="180.0" style="-fx-background-color: #1093bc; -fx-background-radius: 100PX; -fx-text-fill: #fff;" text="SignUp">
-                                    <VBox.margin>
-                                        <Insets top="30.0" />
-                                    </VBox.margin>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                                </Button>
+                        <Text fx:id="fillAll" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Fill all fields" visible="false">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                      <Button mnemonicParsing="false" onMouseClicked="#signup" prefWidth="180.0" style="-fx-background-color: #1093bc; -fx-background-radius: 100PX; -fx-text-fill: #fff;" text="SignUp">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets right="23.0" />
+                                 </HBox.margin>
+                                      </Button>
+                              <FontAwesomeIconView fx:id="addedProperly" fill="#14c617" glyphName="THUMBS_UP" size="40" style="-fx-fill: #70e84c;" visible="false">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                           </children>
+                        </HBox>
                                 <HBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
                                     <padding>
                                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

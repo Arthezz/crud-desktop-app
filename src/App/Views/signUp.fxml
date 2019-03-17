@@ -77,7 +77,7 @@
                                     <children>
                                         <TextField fx:id="tf_username" promptText="username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                             <HBox.margin>
-                                                <Insets left="5.0" right="5.0" />
+                                                <Insets left="5.0" right="5.0" top="15.0" />
                                             </HBox.margin>
                                         </TextField>
                               <FontAwesomeIconView glyphName="USER" />
@@ -86,7 +86,7 @@
                                 </HBox>
                         <Text fx:id="userExists" fill="#f80000" strokeType="OUTSIDE" strokeWidth="0.0" text="User exists" visible="false">
                            <VBox.margin>
-                              <Insets top="5.0" />
+                              <Insets bottom="15.0" top="5.0" />
                            </VBox.margin>
                            <font>
                               <Font name="System Bold" size="15.0" />
@@ -113,9 +113,17 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Text>
+                        <Text fx:id="warnEmail" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Email form: name@domain.tld" visible="false">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
                                 <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #fff; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
                                     <children>
-                                        <PasswordField fx:id="pf_password" promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+                                        <PasswordField fx:id="pf_password" promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></PasswordField>
                               <FontAwesomeIconView glyphName="KEY" />
                                     </children>
                                     <VBox.margin>

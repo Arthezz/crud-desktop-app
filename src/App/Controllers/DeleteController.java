@@ -1,6 +1,5 @@
 package App.Controllers;
 
-import App.Main;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
