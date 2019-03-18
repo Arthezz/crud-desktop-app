@@ -33,7 +33,7 @@ public class LoginController implements Initializable {
     @FXML
     void login(MouseEvent event) throws IOException, SQLException {
 
-        String jdbcUrl = "jdbc:mysql://localhost:3306/user_tracker?useSSL=false&serverTimezone=UTC";
+        String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
 
         String username = tf_username.getText();
         String password = pf_password.getText();

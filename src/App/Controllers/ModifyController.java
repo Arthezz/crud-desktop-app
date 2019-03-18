@@ -161,7 +161,7 @@ public class ModifyController implements Initializable {
     private UniversalMethods universalMethods = new UniversalMethods();
 
     private ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
-    private String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
+    private String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
     private Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
     @FXML

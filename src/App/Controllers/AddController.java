@@ -13,6 +13,7 @@ import java.sql.Statement;
 
 public class AddController {
 
+    //buttons
     @FXML
     void btn_close(MouseEvent event) {
         System.exit(0);
@@ -59,10 +60,6 @@ public class AddController {
                 warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);;
         boolean empty = universalMethods.checkFulfill(firstName, lastName, email, city, street, salary, warnFillAll);;
 
-
-
-
-
         if (check && !empty){
 
         try {
@@ -78,7 +75,6 @@ public class AddController {
 
                 int status = (statement).executeUpdate("insert into employee (first_name,last_name,email,city,street,salary)" + " values('" + firstName.getText() + "', '" + lastName.getText() + "'," +
                         " '" + email.getText() + "', '" + city.getText() + "', '" + street.getText() + "', '" + salary.getText() + "')");
-
 
                 if (status > 0) {
                     addedProperlyThumb.setVisible(true);
@@ -99,7 +95,7 @@ public class AddController {
     private UniversalMethods universalMethods = new UniversalMethods();
 
     //Connecting to database
-    private String jdbcUrl = "jdbc:mysql://localhost:3306/employee_tracker?useSSL=false&serverTimezone=UTC";
+    private String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
     private Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
 

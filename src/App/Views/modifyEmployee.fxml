@@ -303,6 +303,9 @@
                                              <HBox.margin>
                                                 <Insets bottom="13.0" right="10.0" />
                                              </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
                                           </FontAwesomeIconView>
                                           <VBox alignment="CENTER" prefHeight="80.0" prefWidth="138.0">
                                              <children>

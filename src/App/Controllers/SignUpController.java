@@ -47,7 +47,7 @@ public class SignUpController implements Initializable {
 
         boolean checkEmail = universalMethods.isValidEmailAddress(tf_email.getText());
 
-        String jdbcUrl = "jdbc:mysql://localhost:3306/user_tracker?useSSL=false&serverTimezone=UTC";
+        String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
 
         Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
