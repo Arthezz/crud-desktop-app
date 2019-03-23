@@ -23,4 +23,5 @@ Just open DMA.jar file from "out/artifacts/DMA_jar by JRE in version 1.8.0_201  
 ##### Remarks 
 
 - I need to look up for better hosting, because current is free which means very slow connection with database
-- Searching for employee after clicking key when entering employee data is delayed by one letter
+- Searching for employee after clicking key when entering employee data is delayed by one letter (solved)
+- I need to forbid non-english letters
