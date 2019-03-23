@@ -64,6 +64,7 @@ public class ModifyController implements Initializable {
         modifiedProperly.setVisible(false);
         empExists.setVisible(false);
         warnTooMany.setVisible(false);
+        warnFillAll.setVisible(false);
 
         boolean check = universalMethods.checkTextFields(newFirstName, newLastName, newEmail, newCity, newStreet, newSalary,
                 warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);;
@@ -78,6 +79,10 @@ public class ModifyController implements Initializable {
                         "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                         " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
 
+                if (resultSet.isBeforeFirst() ) {
+                    resultSet.next();
+                }
+
                 if (!resultSet.next()) {
                     int status = (statement).executeUpdate("UPDATE employee SET first_name" +
                             " = '" + newFirstName.getText() + "', last_name = '" + newLastName.getText() + "'" +
@@ -90,10 +95,11 @@ public class ModifyController implements Initializable {
 
 
                     if (status > 0) {
-                        modifiedProperlyThumb.setVisible(false);
-                        modifiedProperly.setVisible(false);
+                        modifiedProperlyThumb.setVisible(true);
+                        modifiedProperly.setVisible(true);
                         warnTooMany.setVisible(false);
                         universalMethods.clearAllFields(firstName, lastName, email, city, street, salary);
+                        universalMethods.clearAllFields(newFirstName, newLastName, newEmail, newCity, newStreet, newSalary);
                     }
 
                 }else warnTooMany.setVisible(true);
@@ -115,6 +121,7 @@ public class ModifyController implements Initializable {
                     " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
                     "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                     " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+
 
             while (resultSet.next()){
                 oblist.add(new ModelTable(resultSet.getString("first_name"), resultSet.getString("last_name"), resultSet.getString("email"),

@@ -58,7 +58,7 @@ public class LoginController implements Initializable {
     @FXML
     void signup(MouseEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/signup.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/signUp.fxml"));
 
         universalMethods.loadView(event, root, main);
 

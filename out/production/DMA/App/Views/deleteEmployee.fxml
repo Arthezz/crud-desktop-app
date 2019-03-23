@@ -156,7 +156,7 @@
                                        <children>
                                           <VBox alignment="TOP_CENTER" prefHeight="243.0" prefWidth="310.0">
                                              <children>
-                                                            <TextField fx:id="firstName" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#searchEmployee" prefHeight="31.0" prefWidth="153.0" promptText="First Name" style="-fx-background-radius: 20;" VBox.vgrow="ALWAYS">
+                                                            <TextField fx:id="firstName" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#searchEmployee" prefHeight="31.0" prefWidth="153.0" promptText="First Name" style="-fx-background-radius: 20;" VBox.vgrow="ALWAYS">
                                                                 <VBox.margin>
                                                                     <Insets left="20.0" right="20.0" top="30.0" />
                                                                 </VBox.margin>

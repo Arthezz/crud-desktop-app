@@ -76,7 +76,6 @@ public class SignUpController implements Initializable {
                         tf_email.clear();
                         pf_password.clear();
 
-                        System.out.println("user registered");
                     }
                 }else warnEmail.setVisible(true);
             } else emailExists.setVisible(true);

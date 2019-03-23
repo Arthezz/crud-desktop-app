@@ -7,19 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_5_7.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DMA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DMA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/AddController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/AddController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/DbConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/DbConnect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/DeleteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/DeleteController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/ModifyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/ModifyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/ReadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/ReadController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Controllers/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Controllers/SignUpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/app.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/app.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/deleteEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/deleteEmployee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/modifyEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/modifyEmployee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/readDatabase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/readDatabase.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/Views/signUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DMA/App/Views/signUp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/App/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DMA/module-info.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/AddController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/DbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/DbConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/DeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/DeleteController.java" afterDir="false" />
@@ -27,9 +37,15 @@
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/ModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/ModifyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/ReadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/ReadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/app.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/app.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Views/readDatabase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/readDatabase.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/signUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/signUp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../path-for-terminal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../path-for-terminal.txt" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -102,40 +118,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Controllers/ReadController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/Views/login.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/Controllers/AddController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="114">
+              <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/Controllers/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="72" />
+            <state relative-caret-position="539">
+              <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,10 +143,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Controllers/AppController.java">
+        <entry file="file://$PROJECT_DIR$/src/App/Controllers/ReadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="249">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,8 +157,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/Controllers/ModifyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="163" column="76" selection-start-line="163" selection-start-column="76" selection-end-line="163" selection-end-column="76" />
+            <state relative-caret-position="310">
+              <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="83" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/Controllers/SignUpController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="72" />
+            <state relative-caret-position="998">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,8 +181,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
+            <state relative-caret-position="539">
               <caret line="142" column="28" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -206,8 +205,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/Controllers/DeleteController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="75" column="96" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="96" />
+            <state relative-caret-position="68">
+              <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="77" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -246,6 +245,7 @@
       <find>thum</find>
       <find>email</find>
       <find>fn</find>
+      <find>signup</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -274,24 +274,24 @@
         <option value="$PROJECT_DIR$/src/module-info.java" />
         <option value="$PROJECT_DIR$/src/App/Views/addUser.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/deleteUser.fxml" />
-        <option value="$PROJECT_DIR$/src/App/Main.java" />
-        <option value="$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/signUp.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/app.fxml" />
         <option value="$PROJECT_DIR$/src/App/Controllers/AppController.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/ModelTable.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java" />
         <option value="$PROJECT_DIR$/src/App/Views/addEmployee.fxml" />
-        <option value="$PROJECT_DIR$/src/App/Views/readDatabase.fxml" />
         <option value="$PROJECT_DIR$/src/App/Controllers/DbConnect.java" />
+        <option value="$PROJECT_DIR$/src/App/Views/login.fxml" />
         <option value="$PROJECT_DIR$/src/App/Controllers/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/App/Controllers/DeleteController.java" />
+        <option value="$PROJECT_DIR$/src/App/Main.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/SignUpController.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/ModifyController.java" />
-        <option value="$PROJECT_DIR$/src/App/Controllers/ReadController.java" />
         <option value="$PROJECT_DIR$/src/App/Controllers/AddController.java" />
+        <option value="$PROJECT_DIR$/src/App/Controllers/DeleteController.java" />
+        <option value="$PROJECT_DIR$/src/App/Controllers/ReadController.java" />
+        <option value="$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml" />
+        <option value="$PROJECT_DIR$/src/App/Views/readDatabase.fxml" />
         <option value="$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml" />
-        <option value="$PROJECT_DIR$/src/App/Views/login.fxml" />
       </list>
     </option>
   </component>
@@ -317,6 +317,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -368,7 +369,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -387,10 +387,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552949351977" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553381607075" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Programowanie/Biblioteki/mysql-connector-java-8.0.15/mysql-connector-java-8.0.15.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -539,12 +539,18 @@
       <workItem from="1552659494235" duration="2455000" />
       <workItem from="1552774225171" duration="3264000" />
       <workItem from="1552846882186" duration="6356000" />
-      <workItem from="1552923921813" duration="10969000" />
+      <workItem from="1552923921813" duration="12036000" />
+      <workItem from="1553082535765" duration="437000" />
+      <workItem from="1553083125214" duration="519000" />
+      <workItem from="1553201243204" duration="180000" />
+      <workItem from="1553260902492" duration="640000" />
+      <workItem from="1553374747055" duration="2078000" />
+      <workItem from="1553377141459" duration="4258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136235000" />
+    <option name="totallyTimeSpent" value="145414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -554,7 +560,7 @@
       <window_info id="UI Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.15191898" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.16151386" />
       <window_info id="Structure" order="5" weight="0.25" />
       <window_info id="Favorites" order="6" weight="0.32995737" />
       <window_info id="Persistence" order="7" side_tool="true" />
@@ -564,7 +570,7 @@
       <window_info anchor="bottom" id="Database Console" order="3" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32719395" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -596,9 +602,9 @@
       <window_info id="UI Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.14872068" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.16151386" />
       <window_info id="Structure" order="5" weight="0.25" />
-      <window_info id="Favorites" order="6" />
+      <window_info id="Favorites" order="6" weight="0.32995737" />
       <window_info id="Persistence" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -606,7 +612,7 @@
       <window_info anchor="bottom" id="Database Console" order="3" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32719395" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -675,12 +681,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../Java projekty/KryptografiaFX/src/CryptographyFX/Cryptography.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="28" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../../Java projekty/KryptografiaFX/src/CryptographyFX/Methods.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -689,64 +695,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/IntPredicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://E:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/IntPredicate.java" />
     <entry file="file://$PROJECT_DIR$/src/App/style.css" />
     <entry file="file://$PROJECT_DIR$/style.css" />
-    <entry file="file://$PROJECT_DIR$/src/App/Views/signUp.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="41" lean-forward="true" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Views/readDatabase.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Views/app.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="91" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Views/addEmployee.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3281">
           <caret line="193" column="181" lean-forward="true" selection-start-line="193" selection-start-column="181" selection-end-line="193" selection-end-column="181" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Controllers/DbConnect.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -771,10 +737,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/SignUpController.java">
+    <entry file="file://$PROJECT_DIR$/src/App/Views/signUp.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="72" />
+        <state relative-caret-position="1955">
+          <caret line="115" column="41" lean-forward="true" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Views/login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -783,48 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Controllers/UniversalMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="539">
           <caret line="142" column="28" selection-start-line="142" selection-start-column="28" selection-end-line="142" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/DeleteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="75" column="96" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/AddController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Controllers/AppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -833,8 +785,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Controllers/ModifyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="163" column="76" selection-start-line="163" selection-start-column="76" selection-end-line="163" selection-end-column="76" />
+        <state relative-caret-position="310">
+          <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/SignUpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="998">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -843,26 +815,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Controllers/ReadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        <state relative-caret-position="249">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Views/deleteEmployee.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/DeleteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="77" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Views/readDatabase.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Views/modifyEmployee.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Views/login.fxml">
+    <entry file="file://$PROJECT_DIR$/src/App/Controllers/AddController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="114">
+          <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

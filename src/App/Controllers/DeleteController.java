@@ -1,5 +1,6 @@
 package App.Controllers;
 
+import App.Main;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -71,7 +72,11 @@ public class DeleteController implements Initializable {
                 " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
                 "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                 " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
-            System.out.println(!resultSet.next());
+
+            if (resultSet.isBeforeFirst() ) {
+                resultSet.next();
+            }
+
         if (!resultSet.next()) {
             int status = (statement).executeUpdate("DELETE FROM employee where binary first_name" +
                     " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
@@ -97,14 +102,14 @@ public class DeleteController implements Initializable {
         deletedProperly.setVisible(false);
         warnTooMany.setVisible(false);
 
-        oblist.clear();
-
         Statement statement = myConn.createStatement();
 
         ResultSet resultSet = statement.executeQuery("select * from employee where binary first_name" +
                 " LIKE '" + firstName.getText() + '%' + "' AND binary last_name LIKE '" + lastName.getText() + '%' + "'" +
                 "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                         " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
+
+        oblist.clear();
 
         while (resultSet.next()){
             oblist.add(new ModelTable(resultSet.getString("first_name"), resultSet.getString("last_name"), resultSet.getString("email"),
@@ -154,9 +159,10 @@ public class DeleteController implements Initializable {
 
     private UniversalMethods universalMethods = new UniversalMethods();
 
-    private ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
     private String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
     private Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
+
+    private ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
 
     @FXML
     private Text warnTooMany, deletedProperly;

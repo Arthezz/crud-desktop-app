@@ -66,6 +66,7 @@ public class ReadController implements Initializable {
                 "AND binary email LIKE '" + email.getText() + '%' + "'AND binary city LIKE '" + city.getText() + '%' + "'AND" +
                 " binary street LIKE '" + street.getText() + '%' + "'AND salary LIKE '" + salary.getText() + '%' + "'");
 
+
         while (resultSet.next()){
             oblist.add(new ModelTable(resultSet.getString("first_name"), resultSet.getString("last_name"), resultSet.getString("email"),
                     resultSet.getString("city"), resultSet.getString("street"), resultSet.getString("salary")));
@@ -112,6 +113,7 @@ public class ReadController implements Initializable {
     private UniversalMethods universalMethods = new UniversalMethods();
 
     private ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
+
     private String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
     private Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 

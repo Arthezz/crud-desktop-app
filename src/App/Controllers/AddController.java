@@ -71,6 +71,7 @@ public class AddController {
                     "AND binary email = '" + email.getText() + "'AND binary city = '" + city.getText() + "'AND" +
                     " binary street = '" + street.getText() + "'AND salary = '" + salary.getText() + "'" );
 
+
             if (!resultSet.next()) {
 
                 int status = (statement).executeUpdate("insert into employee (first_name,last_name,email,city,street,salary)" + " values('" + firstName.getText() + "', '" + lastName.getText() + "'," +
