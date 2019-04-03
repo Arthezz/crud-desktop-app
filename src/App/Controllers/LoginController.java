@@ -2,12 +2,13 @@ package App.Controllers;
 
 import App.Main;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -18,12 +19,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+
 public class LoginController implements Initializable {
 
     @FXML
-    void btn_close(MouseEvent event) {
-        System.exit(0);
-    }
+    void btn_close(MouseEvent event) { System.exit(0); }
 
     @FXML
     void btn_minimize(MouseEvent event){
@@ -31,7 +31,14 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    void login(MouseEvent event) throws IOException, SQLException {
+    public void enterPressed(KeyEvent e) throws IOException, SQLException {
+        if (e.getCode().equals(KeyCode.ENTER))
+        {
+            login();
+        }
+    }
+    @FXML
+    void login() throws IOException, SQLException {
 
         String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
 
@@ -46,10 +53,7 @@ public class LoginController implements Initializable {
                 " =  '" + username + "' and binary password = '" + password + "'" );
 
         if (resultSet.next()) {
-
-            Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
-
-            universalMethods.loadView(event, root, main);
+            universalMethods.loadView("app", main, pane);
         }else {
             warnUsrPswd.setVisible(true);
         }
@@ -57,11 +61,7 @@ public class LoginController implements Initializable {
 
     @FXML
     void signup(MouseEvent event) throws IOException {
-
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/signUp.fxml"));
-
-        universalMethods.loadView(event, root, main);
-
+        universalMethods.loadView("signUp", main, pane);
     }
 
     @Override
@@ -79,4 +79,8 @@ public class LoginController implements Initializable {
 
     @FXML
     private PasswordField pf_password;
+
+    @FXML
+    private AnchorPane pane;
+
 }

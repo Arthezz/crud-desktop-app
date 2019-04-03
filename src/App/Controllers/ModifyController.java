@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -20,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+
 
 public class ModifyController implements Initializable {
 
@@ -35,27 +37,27 @@ public class ModifyController implements Initializable {
 
     @FXML
     void btn_add(MouseEvent event) throws IOException {
-        universalMethods.viewAdd(event);
+        universalMethods.viewAdd(pane);
     }
     @FXML
     void btn_delete(MouseEvent event) throws IOException {
-        universalMethods.viewDelete(event);
+        universalMethods.viewDelete(pane);
     }
     @FXML
     void btn_browse(MouseEvent event) throws IOException {
-        universalMethods.viewBrowse(event);
+        universalMethods.viewBrowse(pane);
     }
     @FXML
     void btn_modify(MouseEvent event) throws IOException {
-        universalMethods.viewModify(event);
+        universalMethods.viewModify(pane);
     }
     @FXML
     public void btn_back(MouseEvent event) throws IOException {
-        universalMethods.viewApp(event);
+        universalMethods.viewApp(pane);
     }
     @FXML
     public void btn_signOut(MouseEvent event) throws IOException {
-        universalMethods.signOut(event);
+        universalMethods.signOut(pane);
     }
 
     @FXML
@@ -174,6 +176,9 @@ public class ModifyController implements Initializable {
     @FXML
     private TextField firstName, lastName, email, city, street, salary,
             newFirstName, newLastName, newEmail, newCity, newStreet, newSalary;
+
+    @FXML
+    private AnchorPane pane;
 
     @FXML
     private Text warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary, warnTooMany, warnFillAll, modifiedProperly, empExists;

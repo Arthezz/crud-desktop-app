@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -19,11 +20,11 @@ import java.util.Optional;
 
 public class UniversalMethods {
 
-    static void loadView(MouseEvent event, Parent root, Main main) {
+     void loadView(String view, Main main, AnchorPane pane) throws IOException {
 
-        Node node = (Node) event.getSource();
+         Stage stage = (Stage) pane.getScene().getWindow();
 
-        Stage stage = (Stage) node.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/"+view+".fxml"));
 
         stage.setScene(new Scene(root));
 
@@ -50,37 +51,31 @@ public class UniversalMethods {
         Stage stage = (Stage) node.getScene().getWindow();
         stage.setIconified(true);
     }
-    void viewAdd(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/addEmployee.fxml"));
 
-        loadView(event, root, main);
+
+    void viewAdd(AnchorPane pane) throws IOException {
+        loadView("addEmployee", main, pane);
     }
 
-    void viewDelete(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/deleteEmployee.fxml"));
-
-        loadView(event, root, main);
+    void viewDelete(AnchorPane pane) throws IOException {
+        loadView("deleteEmployee", main, pane);
     }
 
-    void viewBrowse(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/readDatabase.fxml"));
-
-        loadView(event, root, main);
+    void viewBrowse(AnchorPane pane) throws IOException {
+        loadView("readDatabase", main, pane);
     }
 
-    void viewModify(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/modifyEmployee.fxml"));
-
-        loadView(event, root, main);
+    void viewModify(AnchorPane pane) throws IOException {
+        loadView("modifyEmployee", main, pane);
     }
 
-    void viewApp(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/App/Views/app.fxml"));
-
-        loadView(event, root, main);
+    void viewApp(AnchorPane pane) throws IOException {
+        loadView("app", main, pane);
     }
 
-    void signOut(MouseEvent event) throws IOException {
+    void signOut(AnchorPane pane) throws IOException {
+
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation Dialog");
         alert.setHeaderText("Chosen option will sign out you");
@@ -88,9 +83,7 @@ public class UniversalMethods {
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
-            Parent root = FXMLLoader.load(getClass().getResource("/App/Views/login.fxml"));
-
-            loadView(event, root, main);
+            loadView("login", main, pane);
         } else {
             // user chose CANCEL or closed the dialog
         }
@@ -156,7 +149,6 @@ public class UniversalMethods {
         return m.matches();
     }
 
-    Main main = new Main();
-
+     Main main = new Main();
 
 }

@@ -4,6 +4,7 @@ import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -26,27 +27,27 @@ public class AddController {
 
     @FXML
     void btn_add(MouseEvent event) throws IOException {
-        universalMethods.viewAdd(event);
+        universalMethods.viewAdd(pane);
     }
     @FXML
     void btn_delete(MouseEvent event) throws IOException {
-        universalMethods.viewDelete(event);
+        universalMethods.viewDelete(pane);
     }
     @FXML
     void btn_browse(MouseEvent event) throws IOException {
-        universalMethods.viewBrowse(event);
+        universalMethods.viewBrowse(pane);
     }
     @FXML
     void btn_modify(MouseEvent event) throws IOException {
-        universalMethods.viewModify(event);
+        universalMethods.viewModify(pane);
     }
     @FXML
     public void btn_back(MouseEvent event) throws IOException {
-        universalMethods.viewApp(event);
+        universalMethods.viewApp(pane);
     }
     @FXML
     public void btn_signOut(MouseEvent event) throws IOException {
-        universalMethods.signOut(event);
+        universalMethods.signOut(pane);
     }
 
     public void newEmployee(MouseEvent event) {
@@ -108,6 +109,9 @@ public class AddController {
 
     @FXML
     private FontAwesomeIconView addedProperlyThumb;
+
+    @FXML
+    private AnchorPane pane;
 
 
 }
