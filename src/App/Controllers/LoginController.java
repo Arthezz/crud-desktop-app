@@ -31,20 +31,21 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    public void enterPressed(KeyEvent e) throws IOException, SQLException {
+    public void enterPressed(KeyEvent e) {
         if (e.getCode().equals(KeyCode.ENTER))
         {
             login();
         }
     }
-    @FXML
-    void login() throws IOException, SQLException {
 
-        String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
+    public void login(){
+
+        warnUsrPswd.setVisible(false);
 
         String username = tf_username.getText();
         String password = pf_password.getText();
 
+        try {
         Connection myConn = DbConnect.getInstance().getConnection(jdbcUrl);
 
         Statement statement = myConn.createStatement();
@@ -56,7 +57,10 @@ public class LoginController implements Initializable {
             universalMethods.loadView("app", main, pane);
         }else {
             warnUsrPswd.setVisible(true);
-        }
+
+        }} catch (Exception e) {
+        e.printStackTrace();
+      }
     }
 
     @FXML
@@ -70,6 +74,8 @@ public class LoginController implements Initializable {
 
     Main main = new Main();
     UniversalMethods universalMethods = new UniversalMethods();
+
+    private String jdbcUrl = "jdbc:mysql://db4free.net:3306/cruddesktopapp";
 
     @FXML
     private TextField tf_username;

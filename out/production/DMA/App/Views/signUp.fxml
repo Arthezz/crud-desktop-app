@@ -75,7 +75,7 @@
                                         <Insets top="15.0" />
                                     </VBox.margin>
                                     <children>
-                                        <TextField fx:id="tf_username" promptText="username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                        <TextField fx:id="tf_username" onKeyPressed="#enterPressed" promptText="username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                             <HBox.margin>
                                                 <Insets left="5.0" right="5.0" top="15.0" />
                                             </HBox.margin>
@@ -94,7 +94,7 @@
                         </Text>
                                 <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #fff; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
                                     <children>
-                                        <TextField fx:id="tf_email" promptText="email" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                        <TextField fx:id="tf_email" onKeyPressed="#enterPressed" promptText="email" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                             <HBox.margin>
                                                 <Insets left="5.0" right="5.0" />
                                             </HBox.margin>
@@ -120,7 +120,7 @@
                         </Text>
                                 <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: #fff; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
                                     <children>
-                                        <PasswordField fx:id="pf_password" promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                        <PasswordField fx:id="pf_password" onKeyPressed="#enterPressed" promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin></PasswordField>

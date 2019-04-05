@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -32,7 +34,15 @@ public class SignUpController implements Initializable {
     }
 
     @FXML
-    void signup(MouseEvent event) throws SQLException {
+    public void enterPressed(KeyEvent e) throws SQLException {
+        if (e.getCode().equals(KeyCode.ENTER))
+        {
+            signup();
+        }
+    }
+
+    @FXML
+    void signup() throws SQLException {
 
         addedProperly.setVisible(false);
         fillAll.setVisible(false);
@@ -98,5 +108,4 @@ public class SignUpController implements Initializable {
 
     @FXML
     private Text fillAll, emailExists, userExists, warnEmail;
-
 }

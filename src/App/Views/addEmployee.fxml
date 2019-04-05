@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.octicons.OctIconView?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
 <AnchorPane fx:id="pane" prefHeight="603.0" prefWidth="864.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controllers.AddController">
     <children>
         <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
@@ -242,45 +251,50 @@
                               </VBox>
                               <VBox alignment="CENTER" prefWidth="310.0">
                                  <children>
-                                    <Text fx:id="empExists" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee exisits" visible="false">
-                                       <font>
-                                          <Font name="System Bold" size="15.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" right="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE_ALT" onMouseClicked="#newEmployee" size="80" text="">
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <VBox.margin>
-                                          <Insets right="10.0" />
-                                       </VBox.margin>
-                                    </FontAwesomeIconView>
-                                    <Text fill="WHITE" onMouseClicked="#newEmployee" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Add new employee">
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <VBox.margin>
-                                          <Insets right="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <FontAwesomeIconView fx:id="addedProperlyThumb" glyphName="THUMBS_UP" size="40" style="-fx-fill: #70e84c;" visible="false">
-                                       <VBox.margin>
-                                          <Insets right="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </FontAwesomeIconView>
-                                    <Text fx:id="addedProperly" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #70e84c;" text="Employee added" visible="false">
-                                       <VBox.margin>
-                                          <Insets right="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Text fx:id="warnFillAll" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quciksand; -fx-font-weight: bold;" text="You have to fill all fields!" visible="false">
-                                       <VBox.margin>
-                                          <Insets right="10.0" />
-                                       </VBox.margin>
-                                    </Text>
+                                    <VBox alignment="CENTER" prefHeight="661.0" prefWidth="310.0">
+                                       <children>
+                                          <Text fx:id="empExists" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee exisits" visible="false">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE_ALT" onMouseClicked="#newEmployee" size="80" text="">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </FontAwesomeIconView>
+                                          <Text fill="WHITE" onMouseClicked="#newEmployee" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold;" text="Add new employee">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <FontAwesomeIconView fx:id="addedProperlyThumb" glyphName="THUMBS_UP" size="40" style="-fx-fill: #70e84c;" visible="false">
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </FontAwesomeIconView>
+                                          <Text fx:id="addedProperly" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #70e84c;" text="Employee added" visible="false">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="warnFillAll" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quciksand; -fx-font-weight: bold;" text="You have to fill all fields!" visible="false">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="267.0" prefWidth="292.0" />
                                  </children>
                               </VBox>
                            </children>

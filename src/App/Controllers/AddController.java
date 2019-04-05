@@ -58,8 +58,8 @@ public class AddController {
         empExists.setVisible(false);
 
         boolean check = universalMethods.checkTextFields(firstName, lastName, email, city, street, salary,
-                warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);;
-        boolean empty = universalMethods.checkFulfill(firstName, lastName, email, city, street, salary, warnFillAll);;
+                warnFName, warnLName, warnEmail, warnCity, warnStreet, warnSalary);
+        boolean empty = universalMethods.checkFulfill(firstName, lastName, email, city, street, salary, warnFillAll);
 
         if (check && !empty){
 
@@ -85,7 +85,9 @@ public class AddController {
                     universalMethods.clearAllFields(firstName, lastName, email, city, street, salary);
                 }
 
-            }else empExists.setVisible(true);
+            }else {
+                empExists.setVisible(true);
+            }
 
         }  catch (Exception e) {
             e.printStackTrace();
